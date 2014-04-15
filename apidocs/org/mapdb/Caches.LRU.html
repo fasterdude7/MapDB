@@ -131,7 +131,7 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <!--   -->
 </a>
 <h3>Nested classes/interfaces inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></h3>
-<code><a href="../../org/mapdb/EngineWrapper.CloseOnJVMShutdown.html" title="class in org.mapdb">EngineWrapper.CloseOnJVMShutdown</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
+<code><a href="../../org/mapdb/EngineWrapper.CloseOnJVMShutdown.html" title="class in org.mapdb">EngineWrapper.CloseOnJVMShutdown</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a></code></li>
 </ul>
 </li>
 </ul>
@@ -184,12 +184,14 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/Caches.LRU.html#Caches.LRU(org.mapdb.Engine, int)">Caches.LRU</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-          int&nbsp;cacheSize)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../org/mapdb/Caches.LRU.html#Caches.LRU(org.mapdb.Engine, int, boolean)">Caches.LRU</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+          int&nbsp;cacheSize,
+          boolean&nbsp;disableLocks)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/Caches.LRU.html#Caches.LRU(org.mapdb.Engine, org.mapdb.LongMap)">Caches.LRU</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-          <a href="../../org/mapdb/LongMap.html" title="class in org.mapdb">LongMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;cache)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../org/mapdb/Caches.LRU.html#Caches.LRU(org.mapdb.Engine, org.mapdb.LongMap, boolean)">Caches.LRU</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+          <a href="../../org/mapdb/LongMap.html" title="class in org.mapdb">LongMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;cache,
+          boolean&nbsp;disableLocks)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -268,7 +270,7 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></h3>
-<code><a href="../../org/mapdb/EngineWrapper.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/EngineWrapper.html#canSnapshot()">canSnapshot</a>, <a href="../../org/mapdb/EngineWrapper.html#checkClosed(V)">checkClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#commit()">commit</a>, <a href="../../org/mapdb/EngineWrapper.html#compact()">compact</a>, <a href="../../org/mapdb/EngineWrapper.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine</a>, <a href="../../org/mapdb/EngineWrapper.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#isReadOnly()">isReadOnly</a>, <a href="../../org/mapdb/EngineWrapper.html#preallocate()">preallocate</a>, <a href="../../org/mapdb/EngineWrapper.html#preallocate(long[])">preallocate</a>, <a href="../../org/mapdb/EngineWrapper.html#registerCloseListener(java.lang.Runnable)">registerCloseListener</a>, <a href="../../org/mapdb/EngineWrapper.html#snapshot()">snapshot</a>, <a href="../../org/mapdb/EngineWrapper.html#unregisterCloseListener(java.lang.Runnable)">unregisterCloseListener</a></code></li>
+<code><a href="../../org/mapdb/EngineWrapper.html#canRollback()">canRollback</a>, <a href="../../org/mapdb/EngineWrapper.html#canSnapshot()">canSnapshot</a>, <a href="../../org/mapdb/EngineWrapper.html#checkClosed(V)">checkClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#closeListenerRegister(java.lang.Runnable)">closeListenerRegister</a>, <a href="../../org/mapdb/EngineWrapper.html#closeListenerUnregister(java.lang.Runnable)">closeListenerUnregister</a>, <a href="../../org/mapdb/EngineWrapper.html#commit()">commit</a>, <a href="../../org/mapdb/EngineWrapper.html#compact()">compact</a>, <a href="../../org/mapdb/EngineWrapper.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/EngineWrapper.html#getWrappedEngine()">getWrappedEngine</a>, <a href="../../org/mapdb/EngineWrapper.html#isClosed()">isClosed</a>, <a href="../../org/mapdb/EngineWrapper.html#isReadOnly()">isReadOnly</a>, <a href="../../org/mapdb/EngineWrapper.html#preallocate()">preallocate</a>, <a href="../../org/mapdb/EngineWrapper.html#preallocate(long[])">preallocate</a>, <a href="../../org/mapdb/EngineWrapper.html#snapshot()">snapshot</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -317,24 +319,26 @@ extends <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="Caches.LRU(org.mapdb.Engine, int)">
+<a name="Caches.LRU(org.mapdb.Engine, int, boolean)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>Caches.LRU</h4>
 <pre>public&nbsp;Caches.LRU(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-          int&nbsp;cacheSize)</pre>
+          int&nbsp;cacheSize,
+          boolean&nbsp;disableLocks)</pre>
 </li>
 </ul>
-<a name="Caches.LRU(org.mapdb.Engine, org.mapdb.LongMap)">
+<a name="Caches.LRU(org.mapdb.Engine, org.mapdb.LongMap, boolean)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>Caches.LRU</h4>
 <pre>public&nbsp;Caches.LRU(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-          <a href="../../org/mapdb/LongMap.html" title="class in org.mapdb">LongMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;cache)</pre>
+          <a href="../../org/mapdb/LongMap.html" title="class in org.mapdb">LongMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;cache,
+          boolean&nbsp;disableLocks)</pre>
 </li>
 </ul>
 </li>

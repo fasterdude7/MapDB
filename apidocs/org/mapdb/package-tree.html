@@ -104,7 +104,7 @@
 <li type="circle">org.mapdb.<a href="../../org/mapdb/BTreeMap.BTreeIterator.html" title="class in org.mapdb"><span class="strong">BTreeMap.BTreeIterator</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/BTreeMap.DirNode.html" title="class in org.mapdb"><span class="strong">BTreeMap.DirNode</span></a> (implements org.mapdb.<a href="../../org/mapdb/BTreeMap.BNode.html" title="interface in org.mapdb">BTreeMap.BNode</a>)</li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/BTreeMap.LeafNode.html" title="class in org.mapdb"><span class="strong">BTreeMap.LeafNode</span></a> (implements org.mapdb.<a href="../../org/mapdb/BTreeMap.BNode.html" title="interface in org.mapdb">BTreeMap.BNode</a>)</li>
-<li type="circle">org.mapdb.<a href="../../org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb"><span class="strong">BTreeMap.NodeSerializer</span></a> (implements org.mapdb.<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;)</li>
+<li type="circle">org.mapdb.<a href="../../org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb"><span class="strong">BTreeMap.NodeSerializer</span></a>&lt;A,B&gt; (implements org.mapdb.<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;)</li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/BTreeMap.ValRef.html" title="class in org.mapdb"><span class="strong">BTreeMap.ValRef</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/Caches.html" title="class in org.mapdb"><span class="strong">Caches</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/CompressLZF.html" title="class in org.mapdb"><span class="strong">CompressLZF</span></a></li>
@@ -127,7 +127,6 @@
 </li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb"><span class="strong">Caches.WeakSoftRef</span></a> (implements org.mapdb.<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>)</li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/EngineWrapper.CloseOnJVMShutdown.html" title="class in org.mapdb"><span class="strong">EngineWrapper.CloseOnJVMShutdown</span></a></li>
-<li type="circle">org.mapdb.<a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb"><span class="strong">EngineWrapper.DebugEngine</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb"><span class="strong">EngineWrapper.ImmutabilityCheckEngine</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb"><span class="strong">EngineWrapper.ReadOnlyEngine</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb"><span class="strong">EngineWrapper.SerializerCheckEngineWrapper</span></a></li>
@@ -135,7 +134,6 @@
 <li type="circle">org.mapdb.<a href="../../org/mapdb/TxEngine.html" title="class in org.mapdb"><span class="strong">TxEngine</span></a></li>
 </ul>
 </li>
-<li type="circle">org.mapdb.<a href="../../org/mapdb/EngineWrapper.DebugEngine.Record.html" title="class in org.mapdb"><span class="strong">EngineWrapper.DebugEngine.Record</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.Item.html" title="class in org.mapdb"><span class="strong">EngineWrapper.ImmutabilityCheckEngine.Item</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/Fun.html" title="class in org.mapdb"><span class="strong">Fun</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/Fun.ArrayComparator.html" title="class in org.mapdb"><span class="strong">Fun.ArrayComparator</span></a> (implements java.util.<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;T&gt;)</li>
@@ -267,10 +265,9 @@
 <li type="circle">org.mapdb.<a href="../../org/mapdb/CC.html" title="interface in org.mapdb"><span class="strong">CC</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb"><span class="strong">DBMaker.Keys</span></a></li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb"><span class="strong">Engine</span></a></li>
+<li type="circle">org.mapdb.<a href="../../org/mapdb/Fun.Function0.html" title="interface in org.mapdb"><span class="strong">Fun.Function0</span></a>&lt;R&gt;</li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb"><span class="strong">Fun.Function1</span></a>&lt;R,A&gt;</li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb"><span class="strong">Fun.Function2</span></a>&lt;R,A,B&gt;</li>
-<li type="circle">org.mapdb.<a href="../../org/mapdb/Fun.Runnable2.html" title="interface in org.mapdb"><span class="strong">Fun.Runnable2</span></a>&lt;A,B&gt;</li>
-<li type="circle">org.mapdb.<a href="../../org/mapdb/Fun.Runnable3.html" title="interface in org.mapdb"><span class="strong">Fun.Runnable3</span></a>&lt;A,B,C&gt;</li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb"><span class="strong">Hasher</span></a>&lt;K&gt;</li>
 <li type="circle">org.mapdb.<a href="../../org/mapdb/LongMap.LongMapIterator.html" title="interface in org.mapdb"><span class="strong">LongMap.LongMapIterator</span></a>&lt;V&gt;</li>
 <li type="circle">java.util.<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util"><span class="strong">Map</span></a>&lt;K,V&gt;

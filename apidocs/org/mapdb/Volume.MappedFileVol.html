@@ -165,14 +165,7 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></h3>
-<code><a href="../../org/mapdb/Volume.ByteBufferVol.html#chunks">chunks</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#growLock">growLock</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#hasLimit">hasLimit</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#readOnly">readOnly</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#sizeLimit">sizeLimit</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="fields_inherited_from_class_org.mapdb.Volume">
-<!--   -->
-</a>
-<h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></h3>
-<code><a href="../../org/mapdb/Volume.html#CHUNK_SHIFT">CHUNK_SHIFT</a>, <a href="../../org/mapdb/Volume.html#CHUNK_SIZE">CHUNK_SIZE</a>, <a href="../../org/mapdb/Volume.html#CHUNK_SIZE_MOD_MASK">CHUNK_SIZE_MOD_MASK</a></code></li>
+<code><a href="../../org/mapdb/Volume.ByteBufferVol.html#chunks">chunks</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#chunkShift">chunkShift</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#chunkSize">chunkSize</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#chunkSizeModMask">chunkSizeModMask</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#growLock">growLock</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#hasLimit">hasLimit</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#readOnly">readOnly</a>, <a href="../../org/mapdb/Volume.ByteBufferVol.html#sizeLimit">sizeLimit</a></code></li>
 </ul>
 </li>
 </ul>
@@ -188,9 +181,11 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/Volume.MappedFileVol.html#Volume.MappedFileVol(java.io.File, boolean, long)">Volume.MappedFileVol</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
+<td class="colOne"><code><strong><a href="../../org/mapdb/Volume.MappedFileVol.html#Volume.MappedFileVol(java.io.File, boolean, long, int, int)">Volume.MappedFileVol</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
                     boolean&nbsp;readOnly,
-                    long&nbsp;sizeLimit)</code>&nbsp;</td>
+                    long&nbsp;sizeLimit,
+                    int&nbsp;chunkShift,
+                    int&nbsp;sizeIncrement)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -246,7 +241,7 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></h3>
-<code><a href="../../org/mapdb/Volume.html#ensureAvailable(long)">ensureAvailable</a>, <a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#getPackedLong(long)">getPackedLong</a>, <a href="../../org/mapdb/Volume.html#getSixLong(long)">getSixLong</a>, <a href="../../org/mapdb/Volume.html#getUnsignedByte(long)">getUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#getUnsignedShort(long)">getUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#memoryFactory(boolean, long)">memoryFactory</a>, <a href="../../org/mapdb/Volume.html#putPackedLong(long, long)">putPackedLong</a>, <a href="../../org/mapdb/Volume.html#putSixLong(long, long)">putSixLong</a>, <a href="../../org/mapdb/Volume.html#putUnsignedByte(long, int)">putUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#putUnsignedShort(long, int)">putUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long)">volumeForFile</a>, <a href="../../org/mapdb/Volume.html#volumeTransfer(long, org.mapdb.Volume, org.mapdb.Volume)">volumeTransfer</a></code></li>
+<code><a href="../../org/mapdb/Volume.html#ensureAvailable(long)">ensureAvailable</a>, <a href="../../org/mapdb/Volume.html#fileFactory(java.io.File, int, boolean, long, int, int)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#fileFactory(java.io.File, int, boolean, long, int, int, java.io.File, java.io.File)">fileFactory</a>, <a href="../../org/mapdb/Volume.html#getPackedLong(long)">getPackedLong</a>, <a href="../../org/mapdb/Volume.html#getSixLong(long)">getSixLong</a>, <a href="../../org/mapdb/Volume.html#getUnsignedByte(long)">getUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#getUnsignedShort(long)">getUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#memoryFactory(boolean, long, int)">memoryFactory</a>, <a href="../../org/mapdb/Volume.html#putPackedLong(long, long)">putPackedLong</a>, <a href="../../org/mapdb/Volume.html#putSixLong(long, long)">putSixLong</a>, <a href="../../org/mapdb/Volume.html#putUnsignedByte(long, int)">putUnsignedByte</a>, <a href="../../org/mapdb/Volume.html#putUnsignedShort(long, int)">putUnsignedShort</a>, <a href="../../org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long, int, int)">volumeForFile</a>, <a href="../../org/mapdb/Volume.html#volumeTransfer(long, org.mapdb.Volume, org.mapdb.Volume)">volumeTransfer</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -313,7 +308,7 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="Volume.MappedFileVol(java.io.File, boolean, long)">
+<a name="Volume.MappedFileVol(java.io.File, boolean, long, int, int)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -321,7 +316,9 @@ extends <a href="../../org/mapdb/Volume.ByteBufferVol.html" title="class in org.
 <h4>Volume.MappedFileVol</h4>
 <pre>public&nbsp;Volume.MappedFileVol(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
                     boolean&nbsp;readOnly,
-                    long&nbsp;sizeLimit)</pre>
+                    long&nbsp;sizeLimit,
+                    int&nbsp;chunkShift,
+                    int&nbsp;sizeIncrement)</pre>
 </li>
 </ul>
 </li>

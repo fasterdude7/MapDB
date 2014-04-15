@@ -198,8 +198,9 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/DB.html#DB(org.mapdb.Engine, boolean)">DB</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-  boolean&nbsp;strictDBGet)</code>&nbsp;</td>
+<td class="colOne"><code><strong><a href="../../org/mapdb/DB.html#DB(org.mapdb.Engine, boolean, boolean)">DB</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+  boolean&nbsp;strictDBGet,
+  boolean&nbsp;disableLocks)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -371,7 +372,9 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected &lt;K&gt;&nbsp;<a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#fillNulls(org.mapdb.BTreeKeySerializer)">fillNulls</a></strong>(<a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;keySerializer)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#fillNulls(org.mapdb.BTreeKeySerializer)">fillNulls</a></strong>(<a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;keySerializer)</code>
+<div class="block">Replace nulls in tuple serializers with default (Comparable) values</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;E</code></td>
@@ -408,7 +411,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <tr class="rowColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.html#getCatalog()">getCatalog</a></strong>()</code>
-<div class="block">Get Named directory.</div>
+<div class="block">Get Name Catalog.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -595,14 +598,15 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>engine</code> - </dd></dl>
 </li>
 </ul>
-<a name="DB(org.mapdb.Engine, boolean)">
+<a name="DB(org.mapdb.Engine, boolean, boolean)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>DB</h4>
 <pre>public&nbsp;DB(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-  boolean&nbsp;strictDBGet)</pre>
+  boolean&nbsp;strictDBGet,
+  boolean&nbsp;disableLocks)</pre>
 </li>
 </ul>
 </li>
@@ -686,7 +690,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>getHashMap</h4>
 <pre>public&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;&nbsp;getHashMap(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <div class="block"><p>Opens existing or creates new Hash Tree Map. This collection perform well under concurrent access. Is best for large keys and large values.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of map</dd><dd><code>K</code> - key</dd><dd><code>V</code> - value</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of the map</dd>
 <dt><span class="strong">Returns:</span></dt><dd>map</dd></dl>
 </li>
 </ul>
@@ -699,7 +703,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;&nbsp;getHashMap(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                              <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;V,K&gt;&nbsp;valueCreator)</pre>
 <div class="block"><p>Opens existing or creates new Hash Tree Map. This collection perform well under concurrent access. Is best for large keys and large values.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of map</dd><dd><code>valueCreator</code> - if value is not found, new is created and placed into map.</dd><dd><code>K</code> - key</dd><dd><code>V</code> - value</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of map</dd><dd><code>valueCreator</code> - if value is not found, new is created and placed into map.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>map</dd></dl>
 </li>
 </ul>
@@ -735,8 +739,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>createHashMap</h4>
 <pre>protected&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a>&lt;K,V&gt;&nbsp;createHashMap(<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;m)</pre>
 <div class="block"><p>Creates new HashMap with more specific arguments</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>K</code> - key type</dd><dd><code>V</code> - value type</dd>
-<dt><span class="strong">Returns:</span></dt><dd>newly created map</dd>
+<dl><dt><span class="strong">Returns:</span></dt><dd>newly created map</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if name is already used</dd></dl>
 </li>
@@ -749,7 +752,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>getHashSet</h4>
 <pre>public&nbsp;&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;K&gt;&nbsp;getHashSet(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <div class="block"><p>Opens existing or creates new Hash Tree Set.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of Set</dd><dd><code>K</code> - values in set</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of the Set</dd>
 <dt><span class="strong">Returns:</span></dt><dd>set</dd></dl>
 </li>
 </ul>
@@ -781,7 +784,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>getTreeMap</h4>
 <pre>public&nbsp;&lt;K,V&gt;&nbsp;<a href="../../org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a>&lt;K,V&gt;&nbsp;getTreeMap(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <div class="block"><p>Opens existing or creates new B-linked-tree Map. This collection performs well under concurrent access. Only trade-off are deletes, which causes tree fragmentation. It is ordered and best suited for small keys and values.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of map</dd><dd><code>K</code> - key</dd><dd><code>V</code> - value</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of map</dd>
 <dt><span class="strong">Returns:</span></dt><dd>map</dd></dl>
 </li>
 </ul>
@@ -815,6 +818,9 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>fillNulls</h4>
 <pre>protected&nbsp;&lt;K&gt;&nbsp;<a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;fillNulls(<a href="../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;K&gt;&nbsp;keySerializer)</pre>
+<div class="block"><p>Replace nulls in tuple serializers with default (Comparable) values</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>keySerializer</code> - with nulls</dd>
+<dt><span class="strong">Returns:</span></dt><dd>keySerializers which does not contain any nulls</dd></dl>
 </li>
 </ul>
 <a name="getCatalog()">
@@ -824,8 +830,8 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>getCatalog</h4>
 <pre>public&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/SortedMap.html?is-external=true" title="class or interface in java.util">SortedMap</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;getCatalog()</pre>
-<div class="block"><p>Get Named directory. Key is name, value is recid under which named record is stored</p></div>
-<dl><dt><span class="strong">Returns:</span></dt><dd></dd></dl>
+<div class="block"><p>Get Name Catalog. It is metatable which contains information about named collections and records. Each collection constructor takes number of parameters, this map contains those parameters.</p><p><em>Note:</em> Do not modify this map, unless you know what you are doing!</p></div>
+<dl><dt><span class="strong">Returns:</span></dt><dd>Name Catalog</dd></dl>
 </li>
 </ul>
 <a name="getTreeSet(java.lang.String)">
@@ -836,7 +842,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>getTreeSet</h4>
 <pre>public&nbsp;&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/NavigableSet.html?is-external=true" title="class or interface in java.util">NavigableSet</a>&lt;K&gt;&nbsp;getTreeSet(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
 <div class="block"><p>Opens existing or creates new B-linked-tree Set.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of set</dd><dd><code>K</code> - values in set</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>name</code> - of set</dd>
 <dt><span class="strong">Returns:</span></dt><dd>set</dd></dl>
 </li>
 </ul>

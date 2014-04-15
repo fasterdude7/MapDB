@@ -112,56 +112,52 @@
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><a href="../../org/mapdb/Fun.Function0.html" title="interface in org.mapdb">Fun.Function0</a>&lt;R&gt;</td>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;R,A&gt;</td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;R,A,B&gt;</td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../org/mapdb/Fun.Runnable2.html" title="interface in org.mapdb">Fun.Runnable2</a>&lt;A,B&gt;</td>
-<td class="colLast">&nbsp;</td>
-</tr>
 <tr class="altColor">
-<td class="colFirst"><a href="../../org/mapdb/Fun.Runnable3.html" title="interface in org.mapdb">Fun.Runnable3</a>&lt;A,B,C&gt;</td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;K&gt;</td>
 <td class="colLast">
 <div class="block">Calculates hash from an object.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../org/mapdb/LongMap.LongMapIterator.html" title="interface in org.mapdb">LongMap.LongMapIterator</a>&lt;V&gt;</td>
 <td class="colLast">
 <div class="block">Iterates over LongMap key and values without boxing long keys</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;</td>
 <td class="colLast">
 <div class="block">Provides serialization and deserialization</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../org/mapdb/SerializerBase.Header.html" title="interface in org.mapdb">SerializerBase.Header</a></td>
 <td class="colLast">
 <div class="block">Header byte, is used at start of each record to indicate data type WARNING !!! values bellow must be unique !!!!!</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../org/mapdb/SerializerBase.HeaderMapDB.html" title="interface in org.mapdb">SerializerBase.HeaderMapDB</a></td>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><a href="../../org/mapdb/TxBlock.html" title="interface in org.mapdb">TxBlock</a></td>
 <td class="colLast">
 <div class="block">Wraps single transaction in a block</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></td>
 <td class="colLast">
 <div class="block">Factory which creates two/three volumes used by each MapDB Storage Engine</div>
@@ -295,7 +291,7 @@
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><a href="../../org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></td>
+<td class="colFirst"><a href="../../org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a>&lt;A,B&gt;</td>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -362,7 +358,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <tr class="rowColor">
 <td class="colFirst"><a href="../../org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a></td>
 <td class="colLast">
-<div class="block">Provides <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io"><code>DataOutput</code></a> implementation on top of growable <code>byte[]</code> <p/>  <code>ByteArrayOutputStream</code> is not used as it requires <code>byte[]</code> copying</div>
+<div class="block">Provides <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io"><code>DataOutput</code></a> implementation on top of growable <code>byte[]</code> <p/>  <a href="http://docs.oracle.com/javase/6/docs/api/java/io/ByteArrayOutputStream.html?is-external=true" title="class or interface in java.io"><code>ByteArrayOutputStream</code></a> is not used as it requires <code>byte[]</code> copying</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -398,14 +394,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <td class="colLast">
 <div class="block">Closes Engine on JVM shutdown using shutdown hook: <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runtime.html?is-external=true#addShutdownHook(java.lang.Thread)" title="class or interface in java.lang"><code>Runtime.addShutdownHook(Thread)</code></a> If engine was closed by user before JVM shutdown, hook is removed to save memory.</div>
 </td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a></td>
-<td class="colLast">&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../org/mapdb/EngineWrapper.DebugEngine.Record.html" title="class in org.mapdb">EngineWrapper.DebugEngine.Record</a></td>
-<td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a></td>

@@ -136,13 +136,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Bind.MapWithModificationListener.html#addModificationListener(org.mapdb.Bind.MapListener)">addModificationListener</a></strong>(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">K</a>,<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">V</a>&gt;&nbsp;listener)</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Bind.MapWithModificationListener.html#modificationListenerAdd(org.mapdb.Bind.MapListener)">modificationListenerAdd</a></strong>(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">K</a>,<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">V</a>&gt;&nbsp;listener)</code>
 <div class="block">Add new modification listener notified when Map has been updated</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Bind.MapWithModificationListener.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener</a></strong>(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">K</a>,<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">V</a>&gt;&nbsp;listener)</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Bind.MapWithModificationListener.html#modificationListenerRemove(org.mapdb.Bind.MapListener)">modificationListenerRemove</a></strong>(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">K</a>,<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">V</a>&gt;&nbsp;listener)</code>
 <div class="block">Remove registered notification listener</div>
 </td>
 </tr>
@@ -172,24 +172,24 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="addModificationListener(org.mapdb.Bind.MapListener)">
+<a name="modificationListenerAdd(org.mapdb.Bind.MapListener)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addModificationListener</h4>
-<pre>void&nbsp;addModificationListener(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">K</a>,<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">V</a>&gt;&nbsp;listener)</pre>
+<h4>modificationListenerAdd</h4>
+<pre>void&nbsp;modificationListenerAdd(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">K</a>,<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">V</a>&gt;&nbsp;listener)</pre>
 <div class="block"><p>Add new modification listener notified when Map has been updated</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - callback interface notified when map changes</dd></dl>
 </li>
 </ul>
-<a name="removeModificationListener(org.mapdb.Bind.MapListener)">
+<a name="modificationListenerRemove(org.mapdb.Bind.MapListener)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>removeModificationListener</h4>
-<pre>void&nbsp;removeModificationListener(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">K</a>,<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">V</a>&gt;&nbsp;listener)</pre>
+<h4>modificationListenerRemove</h4>
+<pre>void&nbsp;modificationListenerRemove(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">K</a>,<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="type parameter in Bind.MapWithModificationListener">V</a>&gt;&nbsp;listener)</pre>
 <div class="block"><p>Remove registered notification listener</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - callback interface notified when map changes</dd></dl>
 </li>

@@ -127,14 +127,6 @@
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.ClassInfo.html#addFieldInfo(org.mapdb.SerializerPojo.FieldInfo)">addFieldInfo(SerializerPojo.FieldInfo)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.ClassInfo.html" title="class in org.mapdb">SerializerPojo.ClassInfo</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Bind.MapWithModificationListener.html#addModificationListener(org.mapdb.Bind.MapListener)">addModificationListener(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a></dt>
-<dd>
-<div class="block">Add new modification listener notified when Map has been updated</div>
-</dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#addModificationListener(org.mapdb.Bind.MapListener)">addModificationListener(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#addModificationListener(org.mapdb.Bind.MapListener)">addModificationListener(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.BTreeIterator.html#advance()">advance()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.BTreeIterator.html" title="class in org.mapdb">BTreeMap.BTreeIterator</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EncryptionXTEA.html#ALIGN">ALIGN</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/EncryptionXTEA.html" title="class in org.mapdb">EncryptionXTEA</a></dt>
@@ -142,6 +134,8 @@
 <div class="block">Blocks sizes are always multiples of this number.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#androidConstructor">androidConstructor</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Hasher.html#ARRAY">ARRAY</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.Header.html#ARRAY_BOOLEAN">ARRAY_BOOLEAN</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/SerializerBase.Header.html" title="interface in org.mapdb">SerializerBase.Header</a></dt>
 <dd>&nbsp;</dd>
@@ -395,8 +389,6 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html#bSerializer">bSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple6KeySerializer</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/CC.html#BTREE_DEFAULT_MAX_NODE_SIZE">BTREE_DEFAULT_MAX_NODE_SIZE</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/CC.html" title="interface in org.mapdb">CC</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb"><span class="strong">BTreeKeySerializer</span></a>&lt;<a href="./org/mapdb/BTreeKeySerializer.html" title="type parameter in BTreeKeySerializer">K</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">Custom serializer for BTreeMap keys which enables <a href="https://en.wikipedia.org/wiki/Delta_encoding">Delta encoding</a>.</div>
@@ -417,7 +409,7 @@
 <dd>
 <div class="block">Applies delta compression on array of tuple.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html#BTreeKeySerializer.Tuple2KeySerializer(java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple2KeySerializer(Comparator&lt;A&gt;, Serializer, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple2KeySerializer</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html#BTreeKeySerializer.Tuple2KeySerializer(java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple2KeySerializer(Comparator&lt;A&gt;, Serializer&lt;A&gt;, Serializer&lt;B&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple2KeySerializer</a></dt>
 <dd>
 <div class="block">Construct new Tuple2 Key Serializer.</div>
 </dd>
@@ -425,7 +417,7 @@
 <dd>
 <div class="block">Applies delta compression on array of tuple.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html#BTreeKeySerializer.Tuple3KeySerializer(java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple3KeySerializer(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Serializer, Serializer, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple3KeySerializer</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html#BTreeKeySerializer.Tuple3KeySerializer(java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple3KeySerializer(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Serializer&lt;A&gt;, Serializer&lt;B&gt;, Serializer&lt;C&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple3KeySerializer</a></dt>
 <dd>
 <div class="block">Construct new Tuple3 Key Serializer.</div>
 </dd>
@@ -433,7 +425,7 @@
 <dd>
 <div class="block">Applies delta compression on array of tuple.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html#BTreeKeySerializer.Tuple4KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple4KeySerializer(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;, Serializer, Serializer, Serializer, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple4KeySerializer</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html#BTreeKeySerializer.Tuple4KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple4KeySerializer(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;, Serializer&lt;A&gt;, Serializer&lt;B&gt;, Serializer&lt;C&gt;, Serializer&lt;D&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple4KeySerializer</a></dt>
 <dd>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </dd>
@@ -441,7 +433,7 @@
 <dd>
 <div class="block">Applies delta compression on array of tuple.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html#BTreeKeySerializer.Tuple5KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple5KeySerializer(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;, Comparator&lt;D&gt;, Serializer, Serializer, Serializer, Serializer, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple5KeySerializer</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html#BTreeKeySerializer.Tuple5KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple5KeySerializer(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;, Comparator&lt;D&gt;, Serializer&lt;A&gt;, Serializer&lt;B&gt;, Serializer&lt;C&gt;, Serializer&lt;D&gt;, Serializer&lt;E&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple5KeySerializer</a></dt>
 <dd>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </dd>
@@ -449,7 +441,7 @@
 <dd>
 <div class="block">Applies delta compression on array of tuple.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html#BTreeKeySerializer.Tuple6KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple6KeySerializer(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;, Comparator&lt;D&gt;, Comparator&lt;E&gt;, Serializer, Serializer, Serializer, Serializer, Serializer, Serializer)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple6KeySerializer</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html#BTreeKeySerializer.Tuple6KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple6KeySerializer(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;, Comparator&lt;D&gt;, Comparator&lt;E&gt;, Serializer&lt;A&gt;, Serializer&lt;B&gt;, Serializer&lt;C&gt;, Serializer&lt;D&gt;, Serializer&lt;E&gt;, Serializer&lt;F&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple6KeySerializer</a></dt>
 <dd>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </dd>
@@ -457,7 +449,7 @@
 <dd>
 <div class="block">A scalable concurrent <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentNavigableMap.html?is-external=true" title="class or interface in java.util.concurrent"><code>ConcurrentNavigableMap</code></a> implementation.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator, int)">BTreeMap(Engine, long, int, boolean, long, BTreeKeySerializer&lt;K&gt;, Serializer&lt;V&gt;, Comparator&lt;K&gt;, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator, int, boolean)">BTreeMap(Engine, long, int, boolean, long, BTreeKeySerializer&lt;K&gt;, Serializer&lt;V&gt;, Comparator&lt;K&gt;, int, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
 <dd>
 <div class="block">Constructor used to create new BTreeMap.</div>
 </dd>
@@ -475,7 +467,7 @@
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/BTreeMap.LeafNode.html" title="class in org.mapdb"><span class="strong">BTreeMap.LeafNode</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb"><span class="strong">BTreeMap.NodeSerializer</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dt><a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb"><span class="strong">BTreeMap.NodeSerializer</span></a>&lt;<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="type parameter in BTreeMap.NodeSerializer">A</a>,<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="type parameter in BTreeMap.NodeSerializer">B</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.NodeSerializer.html#BTreeMap.NodeSerializer(boolean, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator, int)">BTreeMap.NodeSerializer(boolean, BTreeKeySerializer, Serializer, Comparator, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></dt>
 <dd>&nbsp;</dd>
@@ -583,27 +575,27 @@
 <dd>
 <div class="block">Cache created objects using hard reference.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Caches.HardRef.html#Caches.HardRef(org.mapdb.Engine, int)">Caches.HardRef(Engine, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.HardRef.html" title="class in org.mapdb">Caches.HardRef</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Caches.HardRef.html#Caches.HardRef(org.mapdb.Engine, int, boolean)">Caches.HardRef(Engine, int, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.HardRef.html" title="class in org.mapdb">Caches.HardRef</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Caches.HashTable.html" title="class in org.mapdb"><span class="strong">Caches.HashTable</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">Fixed size cache which uses hash table.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Caches.HashTable.html#Caches.HashTable(org.mapdb.Engine, int)">Caches.HashTable(Engine, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.HashTable.html" title="class in org.mapdb">Caches.HashTable</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Caches.HashTable.html#Caches.HashTable(org.mapdb.Engine, int, boolean)">Caches.HashTable(Engine, int, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.HashTable.html" title="class in org.mapdb">Caches.HashTable</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Caches.LRU.html" title="class in org.mapdb"><span class="strong">Caches.LRU</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">Least Recently Used cache.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Caches.LRU.html#Caches.LRU(org.mapdb.Engine, int)">Caches.LRU(Engine, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Caches.LRU.html#Caches.LRU(org.mapdb.Engine, int, boolean)">Caches.LRU(Engine, int, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Caches.LRU.html#Caches.LRU(org.mapdb.Engine, org.mapdb.LongMap)">Caches.LRU(Engine, LongMap&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Caches.LRU.html#Caches.LRU(org.mapdb.Engine, org.mapdb.LongMap, boolean)">Caches.LRU(Engine, LongMap&lt;Object&gt;, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb"><span class="strong">Caches.WeakSoftRef</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">Instance cache which uses <code>SoftReference</code> or <code>WeakReference</code> Items can be removed from cache by Garbage Collector if</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Caches.WeakSoftRef.html#Caches.WeakSoftRef(org.mapdb.Engine, boolean)">Caches.WeakSoftRef(Engine, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Caches.WeakSoftRef.html#Caches.WeakSoftRef(org.mapdb.Engine, boolean, boolean)">Caches.WeakSoftRef(Engine, boolean, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Caches.WeakSoftRef.CacheItem.html" title="interface in org.mapdb"><span class="strong">Caches.WeakSoftRef.CacheItem</span></a> - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
@@ -761,13 +753,19 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeMap.LeafNode.html#child()">child()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.LeafNode.html" title="class in org.mapdb">BTreeMap.LeafNode</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#CHUNK_SHIFT">CHUNK_SHIFT</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#CHUNK_SIZE">CHUNK_SIZE</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#CHUNK_SIZE">CHUNK_SIZE</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#CHUNK_SIZE_MOD_MASK">CHUNK_SIZE_MOD_MASK</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#CHUNK_SIZE_MOD_MASK">CHUNK_SIZE_MOD_MASK</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#chunks">chunks</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#chunkShift">chunkShift</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#chunkSize">chunkSize</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#chunkSize">chunkSize</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#chunkSizeModMask">chunkSizeModMask</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.Header.html#CLASS">CLASS</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/SerializerBase.Header.html" title="interface in org.mapdb">SerializerBase.Header</a></dt>
 <dd>&nbsp;</dd>
@@ -907,6 +905,22 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#closeListener">closeListener</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Engine.html#closeListenerRegister(java.lang.Runnable)">closeListenerRegister(Runnable)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#closeListenerRegister(java.lang.Runnable)">closeListenerRegister(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#closeListenerRegister(java.lang.Runnable)">closeListenerRegister(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/TxEngine.Tx.html#closeListenerRegister(java.lang.Runnable)">closeListenerRegister(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Engine.html#closeListenerUnregister(java.lang.Runnable)">closeListenerUnregister(Runnable)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#closeListenerUnregister(java.lang.Runnable)">closeListenerUnregister(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#closeListenerUnregister(java.lang.Runnable)">closeListenerUnregister(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/TxEngine.Tx.html#closeListenerUnregister(java.lang.Runnable)">closeListenerUnregister(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#closeOnJvmShutdown()">closeOnJvmShutdown()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>
 <div class="block">Adds JVM shutdown hook and closes DB just before JVM;</div>
@@ -940,6 +954,12 @@
 <dt><span class="strong"><a href="./org/mapdb/TxEngine.html#commit()">commit()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/TxEngine.html" title="class in org.mapdb">TxEngine</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/TxEngine.Tx.html#commit()">commit()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.html#commitFileSyncDisable()">commitFileSyncDisable()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
+<dd>
+<div class="block">Disables file sync on commit.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#commitFileSyncDisable">commitFileSyncDisable</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/AsyncWriteEngine.html#commitLock">commitLock</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a></dt>
 <dd>
@@ -998,13 +1018,13 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#comparator">comparator</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#comparator(java.util.Comparator)">comparator(Comparator)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#comparator(java.util.Comparator)">comparator(Comparator&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
 <dd>
 <div class="block">comparator used to sort keys.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#comparator">comparator</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#comparator(java.util.Comparator)">comparator(Comparator)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#comparator(java.util.Comparator)">comparator(Comparator&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
 <dd>
 <div class="block">comparator used to sort keys.</div>
 </dd>
@@ -1028,15 +1048,15 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.ArrayComparator.html#compare(java.lang.Object[], java.lang.Object[])">compare(Object[], Object[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.ArrayComparator.html" title="class in org.mapdb">Fun.ArrayComparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2Comparator.html#compare(org.mapdb.Fun.Tuple2, org.mapdb.Fun.Tuple2)">compare(Fun.Tuple2, Fun.Tuple2)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple2Comparator.html" title="class in org.mapdb">Fun.Tuple2Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2Comparator.html#compare(org.mapdb.Fun.Tuple2, org.mapdb.Fun.Tuple2)">compare(Fun.Tuple2&lt;A, B&gt;, Fun.Tuple2&lt;A, B&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple2Comparator.html" title="class in org.mapdb">Fun.Tuple2Comparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3Comparator.html#compare(org.mapdb.Fun.Tuple3, org.mapdb.Fun.Tuple3)">compare(Fun.Tuple3, Fun.Tuple3)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple3Comparator.html" title="class in org.mapdb">Fun.Tuple3Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3Comparator.html#compare(org.mapdb.Fun.Tuple3, org.mapdb.Fun.Tuple3)">compare(Fun.Tuple3&lt;A, B, C&gt;, Fun.Tuple3&lt;A, B, C&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple3Comparator.html" title="class in org.mapdb">Fun.Tuple3Comparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4Comparator.html#compare(org.mapdb.Fun.Tuple4, org.mapdb.Fun.Tuple4)">compare(Fun.Tuple4, Fun.Tuple4)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple4Comparator.html" title="class in org.mapdb">Fun.Tuple4Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4Comparator.html#compare(org.mapdb.Fun.Tuple4, org.mapdb.Fun.Tuple4)">compare(Fun.Tuple4&lt;A, B, C, D&gt;, Fun.Tuple4&lt;A, B, C, D&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple4Comparator.html" title="class in org.mapdb">Fun.Tuple4Comparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5Comparator.html#compare(org.mapdb.Fun.Tuple5, org.mapdb.Fun.Tuple5)">compare(Fun.Tuple5, Fun.Tuple5)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="class in org.mapdb">Fun.Tuple5Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5Comparator.html#compare(org.mapdb.Fun.Tuple5, org.mapdb.Fun.Tuple5)">compare(Fun.Tuple5&lt;A, B, C, D, E&gt;, Fun.Tuple5&lt;A, B, C, D, E&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="class in org.mapdb">Fun.Tuple5Comparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6Comparator.html#compare(org.mapdb.Fun.Tuple6, org.mapdb.Fun.Tuple6)">compare(Fun.Tuple6, Fun.Tuple6)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="class in org.mapdb">Fun.Tuple6Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6Comparator.html#compare(org.mapdb.Fun.Tuple6, org.mapdb.Fun.Tuple6)">compare(Fun.Tuple6&lt;A, B, C, D, E, F&gt;, Fun.Tuple6&lt;A, B, C, D, E, F&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="class in org.mapdb">Fun.Tuple6Comparator</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Atomic.Boolean.html#compareAndSet(boolean, boolean)">compareAndSet(boolean, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Atomic.Boolean.html" title="class in org.mapdb">Atomic.Boolean</a></dt>
 <dd>
@@ -1076,8 +1096,6 @@
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap(long, A, A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.DebugEngine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap(long, A, A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap(long, A, A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.ReadOnlyEngine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap(long, A, A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a></dt>
@@ -1096,15 +1114,15 @@
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/TxEngine.Tx.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap(long, A, A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2.html#compareTo(java.lang.Object)">compareTo(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2.html#compareTo(org.mapdb.Fun.Tuple2)">compareTo(Fun.Tuple2&lt;A, B&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3.html#compareTo(java.lang.Object)">compareTo(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3.html#compareTo(org.mapdb.Fun.Tuple3)">compareTo(Fun.Tuple3&lt;A, B, C&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4.html#compareTo(java.lang.Object)">compareTo(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple4.html" title="class in org.mapdb">Fun.Tuple4</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4.html#compareTo(org.mapdb.Fun.Tuple4)">compareTo(Fun.Tuple4&lt;A, B, C, D&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple4.html" title="class in org.mapdb">Fun.Tuple4</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5.html#compareTo(java.lang.Object)">compareTo(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple5.html" title="class in org.mapdb">Fun.Tuple5</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5.html#compareTo(org.mapdb.Fun.Tuple5)">compareTo(Fun.Tuple5&lt;A, B, C, D, E&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple5.html" title="class in org.mapdb">Fun.Tuple5</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6.html#compareTo(java.lang.Object)">compareTo(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple6.html" title="class in org.mapdb">Fun.Tuple6</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6.html#compareTo(org.mapdb.Fun.Tuple6)">compareTo(Fun.Tuple6&lt;A, B, C, D, E, F&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Fun.Tuple6.html" title="class in org.mapdb">Fun.Tuple6</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/CompressLZF.html#compress(byte[], int, byte[], int)">compress(byte[], int, byte[], int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/CompressLZF.html" title="class in org.mapdb">CompressLZF</a></dt>
 <dd>&nbsp;</dd>
@@ -1301,7 +1319,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/DataOutput2.html" title="class in org.mapdb"><span class="strong">DataOutput2</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
-<div class="block">Provides <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io"><code>DataOutput</code></a> implementation on top of growable <code>byte[]</code> <p/>  <code>ByteArrayOutputStream</code> is not used as it requires <code>byte[]</code> copying</div>
+<div class="block">Provides <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io"><code>DataOutput</code></a> implementation on top of growable <code>byte[]</code> <p/>  <a href="http://docs.oracle.com/javase/6/docs/api/java/io/ByteArrayOutputStream.html?is-external=true" title="class or interface in java.io"><code>ByteArrayOutputStream</code></a> is not used as it requires <code>byte[]</code> copying</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DataOutput2.html#DataOutput2()">DataOutput2()</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/DataOutput2.html" title="class in org.mapdb">DataOutput2</a></dt>
 <dd>&nbsp;</dd>
@@ -1317,7 +1335,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Construct new DB.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.html#DB(org.mapdb.Engine, boolean)">DB(Engine, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.html#DB(org.mapdb.Engine, boolean, boolean)">DB(Engine, boolean, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#db">db</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
 <dd>&nbsp;</dd>
@@ -1395,8 +1413,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Remove existing record from store/cache</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.DebugEngine.html#delete(long, org.mapdb.Serializer)">delete(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#delete(long, org.mapdb.Serializer)">delete(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.ReadOnlyEngine.html#delete(long, org.mapdb.Serializer)">delete(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a></dt>
@@ -1477,7 +1493,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.html#deserialize(java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">deserialize(DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerBase.html" title="class in org.mapdb">SerializerBase</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, org.mapdb.DataInput2)">deserialize(Serializer&lt;A&gt;, int, DataInput2)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, java.io.DataInput)">deserialize(Serializer&lt;A&gt;, int, DataInput)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.html#deserializeClass(java.io.DataInput)">deserializeClass(DataInput)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerBase.html" title="class in org.mapdb">SerializerBase</a></dt>
 <dd>&nbsp;</dd>
@@ -1631,14 +1647,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.CloseOnJVMShutdown.html#EngineWrapper.CloseOnJVMShutdown(org.mapdb.Engine)">EngineWrapper.CloseOnJVMShutdown(Engine)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/EngineWrapper.CloseOnJVMShutdown.html" title="class in org.mapdb">EngineWrapper.CloseOnJVMShutdown</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb"><span class="strong">EngineWrapper.DebugEngine</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.DebugEngine.html#EngineWrapper.DebugEngine(org.mapdb.Engine)">EngineWrapper.DebugEngine(Engine)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/EngineWrapper.DebugEngine.Record.html" title="class in org.mapdb"><span class="strong">EngineWrapper.DebugEngine.Record</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.DebugEngine.Record.html#EngineWrapper.DebugEngine.Record(long, java.lang.String)">EngineWrapper.DebugEngine.Record(long, String)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/EngineWrapper.DebugEngine.Record.html" title="class in org.mapdb">EngineWrapper.DebugEngine.Record</a></dt>
-<dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb"><span class="strong">EngineWrapper.ImmutabilityCheckEngine</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">check if Record Instances were not modified while in cache.</div>
@@ -1683,6 +1691,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#entrySet()">entrySet()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Fun.html#eq(java.lang.Object, java.lang.Object)">eq(Object, Object)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Fun.html" title="class in org.mapdb">Fun</a></dt>
+<dd>
+<div class="block">returns true if all elements are equal, works with nulls</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html#equals(java.lang.Object)">equals(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple2KeySerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html#equals(java.lang.Object)">equals(Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.Tuple3KeySerializer</a></dt>
@@ -1863,6 +1875,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#extendCacheWeakRef(org.mapdb.Engine)">extendCacheWeakRef(Engine)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.html#extendHeapStore()">extendHeapStore()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#extendSnapshotEngine(org.mapdb.Engine)">extendSnapshotEngine(Engine)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#extendStoreAppend()">extendStoreAppend()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
@@ -1911,12 +1925,14 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.MappedFileVol.html#fileChannel">fileChannel</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb">Volume.MappedFileVol</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long)">fileFactory(boolean, int, File, long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.html#fileFactory(java.io.File, int, boolean, long, int, int)">fileFactory(File, int, boolean, long, int, int)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">fileFactory(boolean, int, long, File, File, File)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.html#fileFactory(java.io.File, int, boolean, long, int, int, java.io.File, java.io.File)">fileFactory(File, int, boolean, long, int, int, File, File)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#fillNulls(org.mapdb.BTreeKeySerializer)">fillNulls(BTreeKeySerializer&lt;K&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Replace nulls in tuple serializers with default (Comparable) values</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.html#filter(java.util.NavigableSet, K2)">filter(NavigableSet&lt;Fun.Tuple2&lt;K2, K1&gt;&gt;, K2)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Fun.html" title="class in org.mapdb">Fun</a></dt>
 <dd>
 <div class="block">Find all Primary Keys associated with Secondary Key.</div>
@@ -2035,99 +2051,97 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">compares two arrays using given comparators</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.ArrayComparator.html#Fun.ArrayComparator(java.util.Comparator[])">Fun.ArrayComparator(Comparator[])</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.ArrayComparator.html" title="class in org.mapdb">Fun.ArrayComparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.ArrayComparator.html#Fun.ArrayComparator(java.util.Comparator[])">Fun.ArrayComparator(Comparator&lt;?&gt;[])</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.ArrayComparator.html" title="class in org.mapdb">Fun.ArrayComparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.ArrayComparator.html#Fun.ArrayComparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.ArrayComparator(SerializerBase, DataInput, SerializerBase.FastArrayList)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.ArrayComparator.html" title="class in org.mapdb">Fun.ArrayComparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.ArrayComparator.html#Fun.ArrayComparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.ArrayComparator(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.ArrayComparator.html" title="class in org.mapdb">Fun.ArrayComparator</a></dt>
 <dd>
-<div class="block">constructor used for deserilization</div>
+<div class="block">constructor used for deserialization</div>
 </dd>
+<dt><a href="./org/mapdb/Fun.Function0.html" title="interface in org.mapdb"><span class="strong">Fun.Function0</span></a>&lt;<a href="./org/mapdb/Fun.Function0.html" title="type parameter in Fun.Function0">R</a>&gt; - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Fun.Function1.html" title="interface in org.mapdb"><span class="strong">Fun.Function1</span></a>&lt;<a href="./org/mapdb/Fun.Function1.html" title="type parameter in Fun.Function1">R</a>,<a href="./org/mapdb/Fun.Function1.html" title="type parameter in Fun.Function1">A</a>&gt; - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Fun.Function2.html" title="interface in org.mapdb"><span class="strong">Fun.Function2</span></a>&lt;<a href="./org/mapdb/Fun.Function2.html" title="type parameter in Fun.Function2">R</a>,<a href="./org/mapdb/Fun.Function2.html" title="type parameter in Fun.Function2">A</a>,<a href="./org/mapdb/Fun.Function2.html" title="type parameter in Fun.Function2">B</a>&gt; - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/Fun.Runnable2.html" title="interface in org.mapdb"><span class="strong">Fun.Runnable2</span></a>&lt;<a href="./org/mapdb/Fun.Runnable2.html" title="type parameter in Fun.Runnable2">A</a>,<a href="./org/mapdb/Fun.Runnable2.html" title="type parameter in Fun.Runnable2">B</a>&gt; - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="./org/mapdb/Fun.Runnable3.html" title="interface in org.mapdb"><span class="strong">Fun.Runnable3</span></a>&lt;<a href="./org/mapdb/Fun.Runnable3.html" title="type parameter in Fun.Runnable3">A</a>,<a href="./org/mapdb/Fun.Runnable3.html" title="type parameter in Fun.Runnable3">B</a>,<a href="./org/mapdb/Fun.Runnable3.html" title="type parameter in Fun.Runnable3">C</a>&gt; - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Fun.Tuple2.html" title="class in org.mapdb"><span class="strong">Fun.Tuple2</span></a>&lt;<a href="./org/mapdb/Fun.Tuple2.html" title="type parameter in Fun.Tuple2">A</a>,<a href="./org/mapdb/Fun.Tuple2.html" title="type parameter in Fun.Tuple2">B</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2.html#Fun.Tuple2(A, B)">Fun.Tuple2(A, B)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2.html#Fun.Tuple2(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple2(SerializerBase, DataInput, SerializerBase.FastArrayList)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2.html#Fun.Tuple2(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple2(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a></dt>
 <dd>
-<div class="block">constructor used for deserilization</div>
+<div class="block">constructor used for deserialization</div>
 </dd>
 <dt><a href="./org/mapdb/Fun.Tuple2Comparator.html" title="class in org.mapdb"><span class="strong">Fun.Tuple2Comparator</span></a>&lt;<a href="./org/mapdb/Fun.Tuple2Comparator.html" title="type parameter in Fun.Tuple2Comparator">A</a>,<a href="./org/mapdb/Fun.Tuple2Comparator.html" title="type parameter in Fun.Tuple2Comparator">B</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2Comparator.html#Fun.Tuple2Comparator(java.util.Comparator, java.util.Comparator)">Fun.Tuple2Comparator(Comparator&lt;A&gt;, Comparator&lt;B&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple2Comparator.html" title="class in org.mapdb">Fun.Tuple2Comparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2Comparator.html#Fun.Tuple2Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple2Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple2Comparator.html" title="class in org.mapdb">Fun.Tuple2Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple2Comparator.html#Fun.Tuple2Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple2Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple2Comparator.html" title="class in org.mapdb">Fun.Tuple2Comparator</a></dt>
 <dd>
-<div class="block">constructor used for deserilization</div>
+<div class="block">constructor used for deserialization</div>
 </dd>
 <dt><a href="./org/mapdb/Fun.Tuple3.html" title="class in org.mapdb"><span class="strong">Fun.Tuple3</span></a>&lt;<a href="./org/mapdb/Fun.Tuple3.html" title="type parameter in Fun.Tuple3">A</a>,<a href="./org/mapdb/Fun.Tuple3.html" title="type parameter in Fun.Tuple3">B</a>,<a href="./org/mapdb/Fun.Tuple3.html" title="type parameter in Fun.Tuple3">C</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3.html#Fun.Tuple3(A, B, C)">Fun.Tuple3(A, B, C)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3.html#Fun.Tuple3(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList, int)">Fun.Tuple3(SerializerBase, DataInput, SerializerBase.FastArrayList, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3.html#Fun.Tuple3(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList, int)">Fun.Tuple3(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple3.html" title="class in org.mapdb">Fun.Tuple3</a></dt>
 <dd>
-<div class="block">constructor used for deserilization, <code>extra</code> is added so the functions do not colide</div>
+<div class="block">constructor used for deserialization, <code>extra</code> is added so the functions do not colide</div>
 </dd>
 <dt><a href="./org/mapdb/Fun.Tuple3Comparator.html" title="class in org.mapdb"><span class="strong">Fun.Tuple3Comparator</span></a>&lt;<a href="./org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">A</a>,<a href="./org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">B</a>,<a href="./org/mapdb/Fun.Tuple3Comparator.html" title="type parameter in Fun.Tuple3Comparator">C</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3Comparator.html#Fun.Tuple3Comparator(java.util.Comparator, java.util.Comparator, java.util.Comparator)">Fun.Tuple3Comparator(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple3Comparator.html" title="class in org.mapdb">Fun.Tuple3Comparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3Comparator.html#Fun.Tuple3Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList, int)">Fun.Tuple3Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple3Comparator.html" title="class in org.mapdb">Fun.Tuple3Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple3Comparator.html#Fun.Tuple3Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList, int)">Fun.Tuple3Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple3Comparator.html" title="class in org.mapdb">Fun.Tuple3Comparator</a></dt>
 <dd>
-<div class="block">constructor used for deserilization, <code>extra</code> is added just to make function not to collide</div>
+<div class="block">constructor used for deserialization, <code>extra</code> is added just to make function not to collide</div>
 </dd>
 <dt><a href="./org/mapdb/Fun.Tuple4.html" title="class in org.mapdb"><span class="strong">Fun.Tuple4</span></a>&lt;<a href="./org/mapdb/Fun.Tuple4.html" title="type parameter in Fun.Tuple4">A</a>,<a href="./org/mapdb/Fun.Tuple4.html" title="type parameter in Fun.Tuple4">B</a>,<a href="./org/mapdb/Fun.Tuple4.html" title="type parameter in Fun.Tuple4">C</a>,<a href="./org/mapdb/Fun.Tuple4.html" title="type parameter in Fun.Tuple4">D</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4.html#Fun.Tuple4(A, B, C, D)">Fun.Tuple4(A, B, C, D)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple4.html" title="class in org.mapdb">Fun.Tuple4</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4.html#Fun.Tuple4(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple4(SerializerBase, DataInput, SerializerBase.FastArrayList)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple4.html" title="class in org.mapdb">Fun.Tuple4</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4.html#Fun.Tuple4(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple4(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple4.html" title="class in org.mapdb">Fun.Tuple4</a></dt>
 <dd>
-<div class="block">constructor used for deserilization</div>
+<div class="block">constructor used for deserialization</div>
 </dd>
 <dt><a href="./org/mapdb/Fun.Tuple4Comparator.html" title="class in org.mapdb"><span class="strong">Fun.Tuple4Comparator</span></a>&lt;<a href="./org/mapdb/Fun.Tuple4Comparator.html" title="type parameter in Fun.Tuple4Comparator">A</a>,<a href="./org/mapdb/Fun.Tuple4Comparator.html" title="type parameter in Fun.Tuple4Comparator">B</a>,<a href="./org/mapdb/Fun.Tuple4Comparator.html" title="type parameter in Fun.Tuple4Comparator">C</a>,<a href="./org/mapdb/Fun.Tuple4Comparator.html" title="type parameter in Fun.Tuple4Comparator">D</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4Comparator.html#Fun.Tuple4Comparator(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator)">Fun.Tuple4Comparator(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;, Comparator&lt;D&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple4Comparator.html" title="class in org.mapdb">Fun.Tuple4Comparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4Comparator.html#Fun.Tuple4Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple4Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple4Comparator.html" title="class in org.mapdb">Fun.Tuple4Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple4Comparator.html#Fun.Tuple4Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple4Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple4Comparator.html" title="class in org.mapdb">Fun.Tuple4Comparator</a></dt>
 <dd>
-<div class="block">constructor used for deserilization</div>
+<div class="block">constructor used for deserialization</div>
 </dd>
 <dt><a href="./org/mapdb/Fun.Tuple5.html" title="class in org.mapdb"><span class="strong">Fun.Tuple5</span></a>&lt;<a href="./org/mapdb/Fun.Tuple5.html" title="type parameter in Fun.Tuple5">A</a>,<a href="./org/mapdb/Fun.Tuple5.html" title="type parameter in Fun.Tuple5">B</a>,<a href="./org/mapdb/Fun.Tuple5.html" title="type parameter in Fun.Tuple5">C</a>,<a href="./org/mapdb/Fun.Tuple5.html" title="type parameter in Fun.Tuple5">D</a>,<a href="./org/mapdb/Fun.Tuple5.html" title="type parameter in Fun.Tuple5">E</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5.html#Fun.Tuple5(A, B, C, D, E)">Fun.Tuple5(A, B, C, D, E)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple5.html" title="class in org.mapdb">Fun.Tuple5</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5.html#Fun.Tuple5(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple5(SerializerBase, DataInput, SerializerBase.FastArrayList)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple5.html" title="class in org.mapdb">Fun.Tuple5</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5.html#Fun.Tuple5(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple5(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple5.html" title="class in org.mapdb">Fun.Tuple5</a></dt>
 <dd>
-<div class="block">constructor used for deserilization</div>
+<div class="block">constructor used for deserialization</div>
 </dd>
 <dt><a href="./org/mapdb/Fun.Tuple5Comparator.html" title="class in org.mapdb"><span class="strong">Fun.Tuple5Comparator</span></a>&lt;<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="type parameter in Fun.Tuple5Comparator">A</a>,<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="type parameter in Fun.Tuple5Comparator">B</a>,<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="type parameter in Fun.Tuple5Comparator">C</a>,<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="type parameter in Fun.Tuple5Comparator">D</a>,<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="type parameter in Fun.Tuple5Comparator">E</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5Comparator.html#Fun.Tuple5Comparator(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator)">Fun.Tuple5Comparator(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;, Comparator&lt;D&gt;, Comparator&lt;E&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="class in org.mapdb">Fun.Tuple5Comparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5Comparator.html#Fun.Tuple5Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple5Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="class in org.mapdb">Fun.Tuple5Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple5Comparator.html#Fun.Tuple5Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple5Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple5Comparator.html" title="class in org.mapdb">Fun.Tuple5Comparator</a></dt>
 <dd>
-<div class="block">constructor used for deserilization</div>
+<div class="block">constructor used for deserialization</div>
 </dd>
 <dt><a href="./org/mapdb/Fun.Tuple6.html" title="class in org.mapdb"><span class="strong">Fun.Tuple6</span></a>&lt;<a href="./org/mapdb/Fun.Tuple6.html" title="type parameter in Fun.Tuple6">A</a>,<a href="./org/mapdb/Fun.Tuple6.html" title="type parameter in Fun.Tuple6">B</a>,<a href="./org/mapdb/Fun.Tuple6.html" title="type parameter in Fun.Tuple6">C</a>,<a href="./org/mapdb/Fun.Tuple6.html" title="type parameter in Fun.Tuple6">D</a>,<a href="./org/mapdb/Fun.Tuple6.html" title="type parameter in Fun.Tuple6">E</a>,<a href="./org/mapdb/Fun.Tuple6.html" title="type parameter in Fun.Tuple6">F</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6.html#Fun.Tuple6(A, B, C, D, E, F)">Fun.Tuple6(A, B, C, D, E, F)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple6.html" title="class in org.mapdb">Fun.Tuple6</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6.html#Fun.Tuple6(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple6(SerializerBase, DataInput, SerializerBase.FastArrayList)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple6.html" title="class in org.mapdb">Fun.Tuple6</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6.html#Fun.Tuple6(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple6(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple6.html" title="class in org.mapdb">Fun.Tuple6</a></dt>
 <dd>
-<div class="block">constructor used for deserilization</div>
+<div class="block">constructor used for deserialization</div>
 </dd>
 <dt><a href="./org/mapdb/Fun.Tuple6Comparator.html" title="class in org.mapdb"><span class="strong">Fun.Tuple6Comparator</span></a>&lt;<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="type parameter in Fun.Tuple6Comparator">A</a>,<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="type parameter in Fun.Tuple6Comparator">B</a>,<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="type parameter in Fun.Tuple6Comparator">C</a>,<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="type parameter in Fun.Tuple6Comparator">D</a>,<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="type parameter in Fun.Tuple6Comparator">E</a>,<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="type parameter in Fun.Tuple6Comparator">F</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6Comparator.html#Fun.Tuple6Comparator(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator)">Fun.Tuple6Comparator(Comparator&lt;A&gt;, Comparator&lt;B&gt;, Comparator&lt;C&gt;, Comparator&lt;D&gt;, Comparator&lt;E&gt;, Comparator&lt;F&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="class in org.mapdb">Fun.Tuple6Comparator</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6Comparator.html#Fun.Tuple6Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple6Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="class in org.mapdb">Fun.Tuple6Comparator</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Tuple6Comparator.html#Fun.Tuple6Comparator(org.mapdb.SerializerBase, java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">Fun.Tuple6Comparator(SerializerBase, DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Fun.Tuple6Comparator.html" title="class in org.mapdb">Fun.Tuple6Comparator</a></dt>
 <dd>
-<div class="block">constructor used for deserilization</div>
+<div class="block">constructor used for deserialization</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.HeaderMapDB.html#FUN_COMPARATOR">FUN_COMPARATOR</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/SerializerBase.HeaderMapDB.html" title="interface in org.mapdb">SerializerBase.HeaderMapDB</a></dt>
 <dd>&nbsp;</dd>
@@ -2193,8 +2207,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Get existing record.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.DebugEngine.html#get(long, org.mapdb.Serializer)">get(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#get(long, org.mapdb.Serializer)">get(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html#get(long, org.mapdb.Serializer)">get(long, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a></dt>
@@ -2299,7 +2311,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#getCatalog()">getCatalog()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>
-<div class="block">Get Named directory.</div>
+<div class="block">Get Name Catalog.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#getCircularQueue(java.lang.String)">getCircularQueue(String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
@@ -2381,7 +2393,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">All collections are weakly referenced to prevent two instances of the same collection in memory.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/EncryptionXTEA.html#getHash(byte[], boolean)">getHash(byte[], boolean)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/EncryptionXTEA.html" title="class in org.mapdb">EncryptionXTEA</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/EncryptionXTEA.html#getHash(byte[])">getHash(byte[])</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/EncryptionXTEA.html" title="class in org.mapdb">EncryptionXTEA</a></dt>
 <dd>
 <div class="block">Calculate the hash code for the given data.</div>
 </dd>
@@ -2458,7 +2470,9 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/Caches.WeakSoftRef.CacheWeakItem.html#getRecid()">getRecid()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Caches.WeakSoftRef.CacheWeakItem.html" title="class in org.mapdb">Caches.WeakSoftRef.CacheWeakItem</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Engine.html#getSerializerPojo()">getSerializerPojo()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block"><span class="strong">Deprecated.</span></div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#getSerializerPojo()">getSerializerPojo()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Store.html#getSerializerPojo()">getSerializerPojo()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
@@ -2559,17 +2573,19 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#hasher">hasher</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#hasher(org.mapdb.Hasher)">hasher(Hasher)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#hasher(org.mapdb.Hasher)">hasher(Hasher&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.HTreeSetMaker.html#hasher">hasher</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.HTreeSetMaker.html#hasher(org.mapdb.Hasher)">hasher(Hasher)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeSetMaker.html#hasher(org.mapdb.Hasher)">hasher(Hasher&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Hasher.html" title="interface in org.mapdb"><span class="strong">Hasher</span></a>&lt;<a href="./org/mapdb/Hasher.html" title="type parameter in Hasher">K</a>&gt; - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
 <div class="block">Calculates hash from an object.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#hasher">hasher</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/SerializerBase.HeaderMapDB.html#HASHER_ARRAY">HASHER_ARRAY</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/SerializerBase.HeaderMapDB.html" title="interface in org.mapdb">SerializerBase.HeaderMapDB</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.HeaderMapDB.html#HASHER_BASIC">HASHER_BASIC</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/SerializerBase.HeaderMapDB.html" title="interface in org.mapdb">SerializerBase.HeaderMapDB</a></dt>
 <dd>&nbsp;</dd>
@@ -2685,7 +2701,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Thread safe concurrent HashMap <p/> This map uses full 32bit hash from beginning, There is no initial load factor and rehash.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">HTreeMap(Engine, long, int, long[], Serializer&lt;K&gt;, Serializer&lt;V&gt;, long, long, long, long, long, long[], long[], Fun.Function1&lt;V, K&gt;, Hasher)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher, boolean)">HTreeMap(Engine, long, int, long[], Serializer&lt;K&gt;, Serializer&lt;V&gt;, long, long, long, long, long, long[], long[], Fun.Function1&lt;V, K&gt;, Hasher, boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>
 <div class="block">Opens HTreeMap</div>
 </dd>
@@ -2987,19 +3003,19 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#keySerializer">keySerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#keySerializer(org.mapdb.BTreeKeySerializer)">keySerializer(BTreeKeySerializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#keySerializer(org.mapdb.BTreeKeySerializer)">keySerializer(BTreeKeySerializer&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
 <dd>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#keySerializer">keySerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#keySerializer(org.mapdb.Serializer)">keySerializer(Serializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#keySerializer(org.mapdb.Serializer)">keySerializer(Serializer&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#keySerializer">keySerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#keySerializerWrap(org.mapdb.Serializer)">keySerializerWrap(Serializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#keySerializerWrap(org.mapdb.Serializer)">keySerializerWrap(Serializer&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
 <dd>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
 </dd>
@@ -3079,14 +3095,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#log">log</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/CC.html#LOG_HINTS">LOG_HINTS</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/CC.html" title="interface in org.mapdb">CC</a></dt>
-<dd>
-<div class="block">If true MapDB will display warnings if user is using MapDB API wrong way.</div>
-</dd>
-<dt><span class="strong"><a href="./org/mapdb/CC.html#LOG_LOCKS">LOG_LOCKS</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/CC.html" title="interface in org.mapdb">CC</a></dt>
-<dd>
-<div class="block">Log lock/unlock events.</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#LOG_MASK_OFFSET">LOG_MASK_OFFSET</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#LOG_SEAL">LOG_SEAL</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
@@ -3433,7 +3441,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">maximal non zero slot in free phys record, access requires <code>structuralLock</code></div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#memoryFactory(boolean, long)">memoryFactory(boolean, long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.html#memoryFactory(boolean, long, int)">memoryFactory(boolean, long, int)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Pump.html#merge(java.util.Iterator...)">merge(Iterator...)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Pump.html" title="class in org.mapdb">Pump</a></dt>
 <dd>
@@ -3456,6 +3464,22 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/TxEngine.Tx.html#mod">mod</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#MOD8">MOD8</a></span> - Static variable in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Bind.MapWithModificationListener.html#modificationListenerAdd(org.mapdb.Bind.MapListener)">modificationListenerAdd(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a></dt>
+<dd>
+<div class="block">Add new modification listener notified when Map has been updated</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#modificationListenerAdd(org.mapdb.Bind.MapListener)">modificationListenerAdd(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#modificationListenerAdd(org.mapdb.Bind.MapListener)">modificationListenerAdd(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Bind.MapWithModificationListener.html#modificationListenerRemove(org.mapdb.Bind.MapListener)">modificationListenerRemove(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a></dt>
+<dd>
+<div class="block">Remove registered notification listener</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#modificationListenerRemove(org.mapdb.Bind.MapListener)">modificationListenerRemove(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#modificationListenerRemove(org.mapdb.Bind.MapListener)">modificationListenerRemove(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#modified">modified</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
@@ -3526,6 +3550,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#newFileDB(java.io.File)">newFileDB(File)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>
 <div class="block">Creates or open database stored in file.</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.html#newHeapDB()">newHeapDB()</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
+<dd>
+<div class="block">Creates new in-memory database which stores all data on heap without serialization.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#newMemoryDB()">newMemoryDB()</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>
@@ -3711,10 +3739,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Preallocates recids for not yet created record.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.DebugEngine.html#preallocate()">preallocate()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.DebugEngine.html#preallocate(long[])">preallocate(long[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#preallocate()">preallocate()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#preallocate(long[])">preallocate(long[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
@@ -3821,7 +3845,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#pumpSource">pumpSource</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#pumpSource(java.util.Iterator)">pumpSource(Iterator&lt;K&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#pumpSource(java.util.Iterator)">pumpSource(Iterator&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#pumpValueExtractor">pumpValueExtractor</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
@@ -3845,8 +3869,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Insert new record.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.DebugEngine.html#put(A, org.mapdb.Serializer)">put(A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html#put(A, org.mapdb.Serializer)">put(A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#put(A, org.mapdb.Serializer)">put(A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
@@ -3957,7 +3979,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><a href="./org/mapdb/Queues.CircularQueue.html" title="class in org.mapdb"><span class="strong">Queues.CircularQueue</span></a>&lt;<a href="./org/mapdb/Queues.CircularQueue.html" title="type parameter in Queues.CircularQueue">E</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueue.html#Queues.CircularQueue(org.mapdb.Engine, org.mapdb.Serializer, long, long, long)">Queues.CircularQueue(Engine, Serializer, long, long, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.CircularQueue.html" title="class in org.mapdb">Queues.CircularQueue</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Queues.CircularQueue.html#Queues.CircularQueue(org.mapdb.Engine, org.mapdb.Serializer, long, long, long)">Queues.CircularQueue(Engine, Serializer&lt;E&gt;, long, long, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Queues.CircularQueue.html" title="class in org.mapdb">Queues.CircularQueue</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Queues.Queue.html" title="class in org.mapdb"><span class="strong">Queues.Queue</span></a>&lt;<a href="./org/mapdb/Queues.Queue.html" title="type parameter in Queues.Queue">E</a>&gt; - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
@@ -4065,14 +4087,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#registerClass(java.lang.Class)">registerClass(Class&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Engine.html#registerCloseListener(java.lang.Runnable)">registerCloseListener(Runnable)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#registerCloseListener(java.lang.Runnable)">registerCloseListener(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Store.html#registerCloseListener(java.lang.Runnable)">registerCloseListener(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/TxEngine.Tx.html#registerCloseListener(java.lang.Runnable)">registerCloseListener(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#registered">registered</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#reinit()">reinit()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
@@ -4126,14 +4140,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/Queues.SimpleQueue.html#removeAll(java.util.Collection)">removeAll(Collection&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Queues.SimpleQueue.html" title="class in org.mapdb">Queues.SimpleQueue</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#removeInternal(java.lang.Object, int, int, boolean)">removeInternal(Object, int, int, boolean)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Bind.MapWithModificationListener.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a></dt>
-<dd>
-<div class="block">Remove registered notification listener</div>
-</dd>
-<dt><span class="strong"><a href="./org/mapdb/BTreeMap.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeMap.html" title="class in org.mapdb">BTreeMap</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/HTreeMap.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener(Bind.MapListener&lt;K, V&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.html" title="class in org.mapdb">HTreeMap</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#rename(java.lang.String, java.lang.String)">rename(String, String)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>
@@ -4215,13 +4221,11 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/AsyncWriteEngine.WriterRunnable.html#run()">run()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/AsyncWriteEngine.WriterRunnable.html" title="class in org.mapdb">AsyncWriteEngine.WriterRunnable</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/Fun.Function0.html#run()">run()</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Fun.Function0.html" title="interface in org.mapdb">Fun.Function0</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Function1.html#run(A)">run(A)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Fun.Function2.html#run(A, B)">run(A, B)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Runnable2.html#run(A, B)">run(A, B)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Fun.Runnable2.html" title="interface in org.mapdb">Fun.Runnable2</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Fun.Runnable3.html#run(A, B, C)">run(A, B, C)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Fun.Runnable3.html" title="interface in org.mapdb">Fun.Runnable3</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/HTreeMap.ExpireRunnable.html#run()">run()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/HTreeMap.ExpireRunnable.html" title="class in org.mapdb">HTreeMap.ExpireRunnable</a></dt>
 <dd>&nbsp;</dd>
@@ -4309,13 +4313,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#serializer">serializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#serializer(org.mapdb.BTreeKeySerializer)">serializer(BTreeKeySerializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeSetMaker.html#serializer(org.mapdb.BTreeKeySerializer)">serializer(BTreeKeySerializer&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeSetMaker.html" title="class in org.mapdb">DB.BTreeSetMaker</a></dt>
 <dd>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.HTreeSetMaker.html#serializer">serializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.HTreeSetMaker.html#serializer(org.mapdb.Serializer)">serializer(Serializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeSetMaker.html#serializer(org.mapdb.Serializer)">serializer(Serializer&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></dt>
 <dd>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
 </dd>
@@ -4491,7 +4495,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/AsyncWriteEngine.WriterRunnable.html#size">size</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/AsyncWriteEngine.WriterRunnable.html" title="class in org.mapdb">AsyncWriteEngine.WriterRunnable</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Bind.html#size(org.mapdb.Bind.MapWithModificationListener, org.mapdb.Atomic.Long)">size(Bind.MapWithModificationListener, Atomic.Long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Bind.html" title="class in org.mapdb">Bind</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Bind.html#size(org.mapdb.Bind.MapWithModificationListener, org.mapdb.Atomic.Long)">size(Bind.MapWithModificationListener&lt;K, V&gt;, Atomic.Long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Bind.html" title="class in org.mapdb">Bind</a></dt>
 <dd>
 <div class="block">Binds <a href="./org/mapdb/Atomic.Long.html" title="class in org.mapdb"><code>Atomic.Long</code></a> to Primary Map so the Atomic.Long contains size of Map.</div>
 </dd>
@@ -4609,7 +4613,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Low level record store.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Store.html#Store(boolean, boolean, byte[])">Store(boolean, boolean, byte[])</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Store.html#Store(boolean, boolean, byte[], boolean)">Store(boolean, boolean, byte[], boolean)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#store_append">store_append</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
 <dd>&nbsp;</dd>
@@ -4627,7 +4631,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Storage Engine which saves record directly into file.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">StoreDirect(Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean, int)">StoreDirect(Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory)">StoreDirect(Volume.Factory)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
@@ -4643,7 +4647,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory)">StoreWAL(Volume.Factory)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">StoreWAL(Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/StoreWAL.html#StoreWAL(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean, int)">StoreWAL(Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.html#strictDBGet">strictDBGet</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.html" title="class in org.mapdb">DB</a></dt>
 <dd>&nbsp;</dd>
@@ -4731,12 +4735,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.html#sync()">sync()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#syncOnCommitDisable">syncOnCommitDisable</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DBMaker.html#syncOnCommitDisable()">syncOnCommitDisable()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
-<dd>
-<div class="block">Disables file sync on commit.</div>
-</dd>
 <dt><span class="strong"><a href="./org/mapdb/StoreDirect.html#syncOnCommitDisabled">syncOnCommitDisabled</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a></dt>
 <dd>&nbsp;</dd>
 </dl>
@@ -4985,14 +4983,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Unpack positive long value from the input stream.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Engine.html#unregisterCloseListener(java.lang.Runnable)">unregisterCloseListener(Runnable)</a></span> - Method in interface org.mapdb.<a href="./org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.html#unregisterCloseListener(java.lang.Runnable)">unregisterCloseListener(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Store.html#unregisterCloseListener(java.lang.Runnable)">unregisterCloseListener(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
-<dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/TxEngine.Tx.html#unregisterCloseListener(java.lang.Runnable)">unregisterCloseListener(Runnable)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/AsyncWriteEngine.html#update(long, A, org.mapdb.Serializer)">update(long, A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a></dt>
 <dd>
 <div class="block">Update existing record with new value.</div>
@@ -5013,8 +5003,6 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Update existing record with new value.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/EngineWrapper.DebugEngine.html#update(long, A, org.mapdb.Serializer)">update(long, A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html#update(long, A, org.mapdb.Serializer)">update(long, A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/EngineWrapper.ReadOnlyEngine.html#update(long, A, org.mapdb.Serializer)">update(long, A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a></dt>
@@ -5091,7 +5079,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#valueCreator">valueCreator</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#valueCreator(org.mapdb.Fun.Function1)">valueCreator(Fun.Function1)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#valueCreator(org.mapdb.Fun.Function1)">valueCreator(Fun.Function1&lt;?, ?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>
 <div class="block">If value is not found, HTreeMap can fetch and insert default value.</div>
 </dd>
@@ -5109,13 +5097,13 @@ This class implements the LZF lossless data compression algorithm.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#valueSerializer">valueSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer(Serializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.BTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer(Serializer&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></dt>
 <dd>
 <div class="block">valueSerializer used to convert values into/from binary form.</div>
 </dd>
 <dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#valueSerializer">valueSerializer</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer(Serializer)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DB.HTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer(Serializer&lt;?&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></dt>
 <dd>
 <div class="block">valueSerializer used to convert values into/from binary form.</div>
 </dd>
@@ -5151,7 +5139,7 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Abstract Volume over bunch of ByteBuffers It leaves ByteBufferVol details (allocation, disposal) on subclasses.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#Volume.ByteBufferVol(boolean, long)">Volume.ByteBufferVol(boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.ByteBufferVol.html#Volume.ByteBufferVol(boolean, long, int)">Volume.ByteBufferVol(boolean, long, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.ByteBufferVol.html" title="class in org.mapdb">Volume.ByteBufferVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Volume.Factory.html" title="interface in org.mapdb"><span class="strong">Volume.Factory</span></a> - Interface in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>
@@ -5161,17 +5149,21 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">Volume which uses FileChannel.</div>
 </dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#Volume.FileChannelVol(java.io.File, boolean, long)">Volume.FileChannelVol(File, boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.FileChannelVol.html#Volume.FileChannelVol(java.io.File, boolean, long, int, int)">Volume.FileChannelVol(File, boolean, long, int, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.FileChannelVol.html" title="class in org.mapdb">Volume.FileChannelVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb"><span class="strong">Volume.MappedFileVol</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.MappedFileVol.html#Volume.MappedFileVol(java.io.File, boolean, long)">Volume.MappedFileVol(File, boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb">Volume.MappedFileVol</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.MappedFileVol.html#Volume.MappedFileVol(java.io.File, boolean, long, int, int)">Volume.MappedFileVol(File, boolean, long, int, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.MappedFileVol.html" title="class in org.mapdb">Volume.MappedFileVol</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="./org/mapdb/Volume.MemoryVol.html" title="class in org.mapdb"><span class="strong">Volume.MemoryVol</span></a> - Class in <a href="./org/mapdb/package-summary.html">org.mapdb</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.MemoryVol.html#Volume.MemoryVol(boolean, long)">Volume.MemoryVol(boolean, long)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.MemoryVol.html" title="class in org.mapdb">Volume.MemoryVol</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.MemoryVol.html#Volume.MemoryVol(boolean, long, int)">Volume.MemoryVol(boolean, long, int)</a></span> - Constructor for class org.mapdb.<a href="./org/mapdb/Volume.MemoryVol.html" title="class in org.mapdb">Volume.MemoryVol</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#volume_heap">volume_heap</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#volume_byteBuffer">volume_byteBuffer</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/CC.html#VOLUME_CHUNK_SHIFT">VOLUME_CHUNK_SHIFT</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/CC.html" title="interface in org.mapdb">CC</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#volume_directByteBuffer">volume_directByteBuffer</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#volume_mmapf">volume_mmapf</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
 <dd>&nbsp;</dd>
@@ -5179,11 +5171,9 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#volume_mmapfPartial">volume_mmapfPartial</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#volume_offheap">volume_offheap</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.Keys.html#volume_raf">volume_raf</a></span> - Static variable in interface org.mapdb.<a href="./org/mapdb/DBMaker.Keys.html" title="interface in org.mapdb">DBMaker.Keys</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="strong"><a href="./org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long)">volumeForFile(File, boolean, boolean, long)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
+<dt><span class="strong"><a href="./org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long, int, int)">volumeForFile(File, boolean, boolean, long, int, int)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Volume.html#volumeTransfer(long, org.mapdb.Volume, org.mapdb.Volume)">volumeTransfer(long, Volume, Volume)</a></span> - Static method in class org.mapdb.<a href="./org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></dt>
 <dd>
@@ -5276,6 +5266,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#_newAppendFileDB(java.io.File)">_newAppendFileDB(File)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#_newFileDB(java.io.File)">_newFileDB(File)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/DBMaker.html#_newHeapDB()">_newHeapDB()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/DBMaker.html#_newMemoryDB()">_newMemoryDB()</a></span> - Method in class org.mapdb.<a href="./org/mapdb/DBMaker.html" title="class in org.mapdb">DBMaker</a></dt>
 <dd>&nbsp;</dd>

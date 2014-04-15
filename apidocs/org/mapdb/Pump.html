@@ -223,7 +223,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
                    <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&nbsp;comparator,
                    <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</pre>
 <div class="block"><p>Sorts large data set by given <code>Comparator</code>. Data are sorted with in-memory cache and temporary files.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - iterator over unsorted data</dd><dd><code>mergeDuplicates</code> - should be duplicate keys merged into single one?</dd><dd><code>batchSize</code> - how much items can fit into heap memory</dd><dd><code>comparator</code> - used to sort data</dd><dd><code>serializer</code> - used to store data in temporary files</dd><dd><code>E</code> - type of data</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>source</code> - iterator over unsorted data</dd><dd><code>mergeDuplicates</code> - should be duplicate keys merged into single one?</dd><dd><code>batchSize</code> - how much items can fit into heap memory</dd><dd><code>comparator</code> - used to sort data</dd><dd><code>serializer</code> - used to store data in temporary files</dd>
 <dt><span class="strong">Returns:</span></dt><dd>iterator over sorted data set</dd></dl>
 </li>
 </ul>
@@ -237,7 +237,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
                    boolean&nbsp;mergeDuplicates,
                    <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>...&nbsp;iterators)</pre>
 <div class="block"><p>Merge presorted iterators into single sorted iterator.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>comp</code> - used to compare data</dd><dd><code>mergeDuplicates</code> - if duplicate keys should be merged into single one</dd><dd><code>iterators</code> - array of already sorted iterators</dd><dd><code>E</code> - type of data</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>comparator</code> - used to compare data</dd><dd><code>mergeDuplicates</code> - if duplicate keys should be merged into single one</dd><dd><code>iterators</code> - array of already sorted iterators</dd>
 <dt><span class="strong">Returns:</span></dt><dd>sorted iterator</dd></dl>
 </li>
 </ul>
@@ -248,9 +248,11 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <li class="blockList">
 <h4>merge</h4>
 <pre>public static&nbsp;&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;E&gt;&nbsp;merge(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>...&nbsp;iters)</pre>
-<div class="block"><p>Merges multiple iterators into single iterator. Does not allow null elements.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>iters</code> - </dd><dd><code>E</code> - </dd>
-<dt><span class="strong">Returns:</span></dt><dd></dd></dl>
+<div class="block"><p>Merges multiple iterators into single iterator. Result iterator will return entries from all iterators. It does not do sorting or any other special functionality. Does not allow null elements.</p></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>iters</code> - <ul>
+  <li>iterators to be merged</li>
+</ul></dd>
+<dt><span class="strong">Returns:</span></dt><dd>union of all iterators.</dd></dl>
 </li>
 </ul>
 <a name="buildTreeMap(java.util.Iterator, org.mapdb.Engine, org.mapdb.Fun.Function1, org.mapdb.Fun.Function1, boolean, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator)">

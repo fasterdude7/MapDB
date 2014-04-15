@@ -94,7 +94,7 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></dd>
+<dd><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
@@ -104,7 +104,7 @@
 <br>
 <pre>public class <span class="strong">SerializerBase</span>
 extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></pre>
+implements <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</pre>
 <div class="block"><p>Serializer which uses &lsquo;header byte&rsquo; to serialize/deserialize most of classes from &lsquo;java.lang&rsquo; and &lsquo;java.util&rsquo; packages.</p></div>
 <dl><dt><span class="strong">Author:</span></dt>
   <dd>Jan Kotek</dd></dl>
@@ -363,7 +363,7 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <div class="block"><p>Serialize the content of an object into a ObjectOutput</p></div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Serializer.html#serialize(java.io.DataOutput, A)">serialize</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></dd>
+<dd><code><a href="../../org/mapdb/Serializer.html#serialize(java.io.DataOutput, A)">serialize</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>out</code> - ObjectOutput to save object into</dd><dd><code>obj</code> - Object to serialize</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -409,7 +409,7 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <div class="block"><p>Deserialize the content of an object from a DataInput.</p></div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Serializer.html#deserialize(java.io.DataInput, int)">deserialize</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></dd>
+<dd><code><a href="../../org/mapdb/Serializer.html#deserialize(java.io.DataInput, int)">deserialize</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>is</code> - to read serialized data from</dd><dd><code>capacity</code> - how many bytes are available in DataInput for reading, may be -1 (in streams) or 0 (null).</dd>
 <dt><span class="strong">Returns:</span></dt><dd>deserialized object</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -540,7 +540,7 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <div class="block"><p>Data could be serialized into record with variable size or fixed size. Some optimizations can be applied to serializers with fixed size</p></div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Serializer.html#fixedSize()">fixedSize</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></dd>
+<dd><code><a href="../../org/mapdb/Serializer.html#fixedSize()">fixedSize</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>fixed size or -1 for variable size</dd></dl>
 </li>
 </ul>

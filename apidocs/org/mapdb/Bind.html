@@ -211,8 +211,8 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Bind.html#size(org.mapdb.Bind.MapWithModificationListener, org.mapdb.Atomic.Long)">size</a></strong>(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&nbsp;map,
+<td class="colFirst"><code>static &lt;K,V&gt;&nbsp;void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Bind.html#size(org.mapdb.Bind.MapWithModificationListener, org.mapdb.Atomic.Long)">size</a></strong>(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
     <a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a>&nbsp;sizeCounter)</code>
 <div class="block">Binds <a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb"><code>Atomic.Long</code></a> to Primary Map so the Atomic.Long contains size of Map.</div>
 </td>
@@ -245,8 +245,8 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>size</h4>
-<pre>public static&nbsp;void&nbsp;size(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&nbsp;map,
-        <a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a>&nbsp;sizeCounter)</pre>
+<pre>public static&nbsp;&lt;K,V&gt;&nbsp;void&nbsp;size(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
+              <a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb">Atomic.Long</a>&nbsp;sizeCounter)</pre>
 <div class="block"><p>Binds <a href="../../org/mapdb/Atomic.Long.html" title="class in org.mapdb"><code>Atomic.Long</code></a> to Primary Map so the Atomic.Long contains size of Map. <code>Atomic.Long</code> is incremented on each insert and decremented on each entry removal. MapDB collections usually do not keep their size, but require complete traversal to count items.</p><p>If <code>Atomic.Long</code> has zero value, it will be updated with value from <code>map.size()</code> and than bind to map.</p><p>This binding is not persistent. You need to restore it every time store is reopened.</p><p>NOTE: <a href="../../org/mapdb/BTreeMap.html" title="class in org.mapdb"><code>BTreeMap</code></a> and <a href="../../org/mapdb/HTreeMap.html" title="class in org.mapdb"><code>HTreeMap</code></a> already supports this directly as optional parameter named <code>counter</code>. In that case all calls to <code>Map.size()</code> are forwarded to underlying counter. Check parameters at <a href="../../org/mapdb/DB.html#createHashMap(java.lang.String)"><code>DB.createHashMap(String)</code></a> and <a href="../../org/mapdb/DB.html#createTreeMap(java.lang.String)"><code>DB.createTreeMap(String)</code></a></p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - primary map whose size needs to be tracked</dd><dd><code>sizeCounter</code> - number updated when Map Entry is added or removed.</dd></dl>
 </li>
@@ -260,8 +260,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public static&nbsp;&lt;K,V,V2&gt;&nbsp;void&nbsp;secondaryValue(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
                            <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K,V2&gt;&nbsp;secondary,
                            <a href="../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;V2,K,V&gt;&nbsp;fun)</pre>
-<div class="block"><p>Binds Secondary Map so that it contains Key from Primary Map and custom Value. Secondary Value is updated every time Primary Map is modified.</p><p>If Secondary Map is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - Primary Map</dd><dd><code>secondary</code> - Secondary Map with custom</dd><dd><code>fun</code> - function which calculates secondary value from primary key and value</dd><dd><code>K</code> - key type in primary and Secondary Map</dd><dd><code>V</code> - value type in Primary Map</dd><dd><code>V2</code> - value type in Secondary Map.</dd></dl>
+<div class="block"><p>Binds Secondary Map so that it contains Key from Primary Map and custom Value. Secondary Value is updated every time Primary Map is modified.</p><p>If Secondary Map is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p><p>Type params:</p>
+<ul>
+  <li><code>&lt;K&gt;</code> - key type in primary and Secondary Map</li>
+  <li><code>&lt;V&gt;</code> - value type in Primary Map</li>
+  <li><code>&lt;V2&gt;</code> - value type in Secondary Map  .</li>
+</ul></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - Primary Map</dd><dd><code>secondary</code> - Secondary Map with custom</dd><dd><code>fun</code> - function which calculates secondary value from primary key and value</dd></dl>
 </li>
 </ul>
 <a name="secondaryValues(org.mapdb.Bind.MapWithModificationListener, java.util.Set, org.mapdb.Fun.Function2)">
@@ -273,8 +278,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public static&nbsp;&lt;K,V,V2&gt;&nbsp;void&nbsp;secondaryValues(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
                             <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K,V2&gt;&gt;&nbsp;secondary,
                             <a href="../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;V2[],K,V&gt;&nbsp;fun)</pre>
-<div class="block"><p>Binds Secondary Map so that it contains Key from Primary Map and custom Value. Secondary Value is updated every time Primary Map is modified.</p><p>If Secondary Map is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - Primary Map</dd><dd><code>secondary</code> - Secondary Map with custom</dd><dd><code>fun</code> - function which calculates secondary values from primary key and value</dd><dd><code>K</code> - key type in primary and Secondary Map</dd><dd><code>V</code> - value type in Primary Map</dd><dd><code>V2</code> - value type in Secondary Map.</dd></dl>
+<div class="block"><p>Binds Secondary Map so that it contains Key from Primary Map and custom Value. Secondary Value is updated every time Primary Map is modified.</p><p>If Secondary Map is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p><p>Type params:</p>
+<ul>
+  <li><code>&lt;K&gt;</code> - key type in primary and Secondary Map</li>
+  <li><code>&lt;V&gt;</code> - value type in Primary Map</li>
+  <li><code>&lt;V2&gt;</code> - value type in Secondary Map .</li>
+</ul></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - Primary Map</dd><dd><code>secondary</code> - Secondary Map with custom</dd><dd><code>fun</code> - function which calculates secondary values from primary key and value</dd></dl>
 </li>
 </ul>
 <a name="secondaryKey(org.mapdb.Bind.MapWithModificationListener, java.util.Set, org.mapdb.Fun.Function2)">
@@ -286,8 +296,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public static&nbsp;&lt;K,V,K2&gt;&nbsp;void&nbsp;secondaryKey(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
                          <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K2,K&gt;&gt;&nbsp;secondary,
                          <a href="../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;K2,K,V&gt;&nbsp;fun)</pre>
-<div class="block"><p>Binds Secondary Set so it contains Secondary Key (Index). Usefull if you need to lookup Keys from Primary Map by custom criteria. Other use is for reverse lookup</p><p>To lookup keys in Secondary Set use <code>Bind#findSecondaryKeys(java.util.NavigableSet, Object)</code></p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - primary map</dd><dd><code>secondary</code> - secondary set</dd><dd><code>fun</code> - function which calculates Secondary Key from Primary Key and Value</dd><dd><code>K</code> - Key in Primary Map</dd><dd><code>V</code> - Value in Primary Map</dd><dd><code>K2</code> - Secondary</dd></dl>
+<div class="block"><p>Binds Secondary Set so it contains Secondary Key (Index). Usefull if you need to lookup Keys from Primary Map by custom criteria. Other use is for reverse lookup</p><p>To lookup keys in Secondary Set use <a href="../../org/mapdb/Fun.html#filter(java.util.NavigableSet, K2)"><code>Fun.filter(java.util.NavigableSet, Object)</code></a></p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p><p>Type params:</p>
+<ul>
+  <li><code>&lt;K&gt;</code> - Key in Primary Map</li>
+  <li><code>&lt;V&gt;</code> - Value in Primary Map</li>
+  <li><code>&lt;K2&gt;</code> - Secondary</li>
+</ul></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - primary map</dd><dd><code>secondary</code> - secondary set</dd><dd><code>fun</code> - function which calculates Secondary Key from Primary Key and Value</dd></dl>
 </li>
 </ul>
 <a name="secondaryKey(org.mapdb.Bind.MapWithModificationListener, java.util.Map, org.mapdb.Fun.Function2)">
@@ -299,8 +314,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public static&nbsp;&lt;K,V,K2&gt;&nbsp;void&nbsp;secondaryKey(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
                          <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;K2,K&gt;&nbsp;secondary,
                          <a href="../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;K2,K,V&gt;&nbsp;fun)</pre>
-<div class="block"><p>Binds Secondary Set so it contains Secondary Key (Index). Usefull if you need to lookup Keys from Primary Map by custom criteria. Other use is for reverse lookup</p><p>To lookup keys in Secondary Set use <code>Bind#findSecondaryKeys(java.util.NavigableSet, Object)</code></p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - primary map</dd><dd><code>secondary</code> - secondary set</dd><dd><code>fun</code> - function which calculates Secondary Key from Primary Key and Value</dd><dd><code>K</code> - Key in Primary Map</dd><dd><code>V</code> - Value in Primary Map</dd><dd><code>K2</code> - Secondary</dd></dl>
+<div class="block"><p>Binds Secondary Set so it contains Secondary Key (Index). Usefull if you need to lookup Keys from Primary Map by custom criteria. Other use is for reverse lookup</p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p><p>Type params:</p>
+<ul>
+  <li><code>&lt;K&gt;</code> - Key in Primary Map</li>
+  <li><code>&lt;V&gt;</code> - Value in Primary Map</li>
+  <li><code>&lt;K2&gt;</code> - Secondary</li>
+</ul></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - primary map</dd><dd><code>secondary</code> - secondary set</dd><dd><code>fun</code> - function which calculates Secondary Key from Primary Key and Value</dd></dl>
 </li>
 </ul>
 <a name="secondaryKeys(org.mapdb.Bind.MapWithModificationListener, java.util.Set, org.mapdb.Fun.Function2)">
@@ -312,8 +332,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public static&nbsp;&lt;K,V,K2&gt;&nbsp;void&nbsp;secondaryKeys(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;map,
                           <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;K2,K&gt;&gt;&nbsp;secondary,
                           <a href="../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;K2[],K,V&gt;&nbsp;fun)</pre>
-<div class="block"><p>Binds Secondary Set so it contains Secondary Key (Index). Useful if you need to lookup Keys from Primary Map by custom criteria. Other use is for reverse lookup</p><p>To lookup keys in Secondary Set use <code>Bind#findSecondaryKeys(java.util.NavigableSet, Object)</code></p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - primary map</dd><dd><code>secondary</code> - secondary set</dd><dd><code>fun</code> - function which calculates Secondary Keys from Primary Key and Value</dd><dd><code>K</code> - Key in Primary Map</dd><dd><code>V</code> - Value in Primary Map</dd><dd><code>K2</code> - Secondary</dd></dl>
+<div class="block"><p>Binds Secondary Set so it contains Secondary Key (Index). Useful if you need to lookup Keys from Primary Map by custom criteria. Other use is for reverse lookup</p><p>To lookup keys in Secondary Set use <a href="../../org/mapdb/Fun.html#filter(java.util.NavigableSet, K2)"><code>Fun.filter(java.util.NavigableSet, Object)</code></a>}</p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p><p>Type params:</p>
+<ul>
+  <li><code>&lt;K&gt;</code> - Key in Primary Map</li>
+  <li><code>&lt;V&gt;</code> - Value in Primary Map</li>
+  <li><code>&lt;K2&gt;</code> - Secondary</li>
+</ul></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>map</code> - primary map</dd><dd><code>secondary</code> - secondary set</dd><dd><code>fun</code> - function which calculates Secondary Keys from Primary Key and Value</dd></dl>
 </li>
 </ul>
 <a name="mapInverse(org.mapdb.Bind.MapWithModificationListener, java.util.Set)">
@@ -324,8 +349,12 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>mapInverse</h4>
 <pre>public static&nbsp;&lt;K,V&gt;&nbsp;void&nbsp;mapInverse(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;primary,
                     <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../org/mapdb/Fun.Tuple2.html" title="class in org.mapdb">Fun.Tuple2</a>&lt;V,K&gt;&gt;&nbsp;inverse)</pre>
-<div class="block"><p>Binds Secondary Set so it contains inverse mapping to Primary Map: Primary Value will become Secondary Key. This is useful for creating bi-directional Maps.</p><p>To lookup keys in Secondary Set use <code>Bind#findSecondaryKeys(java.util.NavigableSet, Object)</code></p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>primary</code> - Primary Map for which inverse mapping will be created</dd><dd><code>inverse</code> - Secondary Set which will contain inverse mapping</dd><dd><code>K</code> - Key in Primary Map and Second Value in Secondary Set</dd><dd><code>V</code> - Value in Primary Map and Primary Value in Secondary Set</dd></dl>
+<div class="block"><p>Binds Secondary Set so it contains inverse mapping to Primary Map: Primary Value will become Secondary Key. This is useful for creating bi-directional Maps.</p><p>To lookup keys in Secondary Set use <a href="../../org/mapdb/Fun.html#filter(java.util.NavigableSet, K2)"><code>Fun.filter(java.util.NavigableSet, Object)</code></a></p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p><p>Type params:</p>
+<ul>
+  <li><code>&lt;K&gt;</code> - Key in Primary Map and Second Value in Secondary Set</li>
+  <li><code>&lt;V&gt;</code> - Value in Primary Map and Primary Value in Secondary Set</li>
+</ul></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>primary</code> - Primary Map for which inverse mapping will be created</dd><dd><code>inverse</code> - Secondary Set which will contain inverse mapping</dd></dl>
 </li>
 </ul>
 <a name="mapInverse(org.mapdb.Bind.MapWithModificationListener, java.util.Map)">
@@ -336,8 +365,12 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <h4>mapInverse</h4>
 <pre>public static&nbsp;&lt;K,V&gt;&nbsp;void&nbsp;mapInverse(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;primary,
                     <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;V,K&gt;&nbsp;inverse)</pre>
-<div class="block"><p>Binds Secondary Set so it contains inverse mapping to Primary Map: Primary Value will become Secondary Key. This is useful for creating bi-directional Maps.</p><p>To lookup keys in Secondary Set use <code>Bind#findSecondaryKeys(java.util.NavigableSet, Object)</code></p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>primary</code> - Primary Map for which inverse mapping will be created</dd><dd><code>inverse</code> - Secondary Set which will contain inverse mapping</dd><dd><code>K</code> - Key in Primary Map and Second Value in Secondary Set</dd><dd><code>V</code> - Value in Primary Map and Primary Value in Secondary Set</dd></dl>
+<div class="block"><p>Binds Secondary Set so it contains inverse mapping to Primary Map: Primary Value will become Secondary Key. This is useful for creating bi-directional Maps.</p><p>In this case some data may be lost, if there are duplicated primary values. It is recommended to use multimap: <code>NavigableSet&lt;Fun.Tuple2&lt;V,K&gt;&gt;</code> which handles value duplicities. Use @{link Bind.mapInverse(MapWithModificationListener&lt;K,V&gt;Set&lt;Fun.Tuple2&lt;V, K&gt;&gt;}</p><p>If Secondary Set is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p><p>Type params:</p>
+<ul>
+  <li><code>&lt;K&gt;</code> - Key in Primary Map and Second Value in Secondary Set</li>
+  <li><code>&lt;V&gt;</code> - Value in Primary Map and Primary Value in Secondary Set</li>
+</ul></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>primary</code> - Primary Map for which inverse mapping will be created</dd><dd><code>inverse</code> - Secondary Set which will contain inverse mapping</dd></dl>
 </li>
 </ul>
 <a name="histogram(org.mapdb.Bind.MapWithModificationListener, java.util.concurrent.ConcurrentMap, org.mapdb.Fun.Function2)">
@@ -349,8 +382,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public static&nbsp;&lt;K,V,C&gt;&nbsp;void&nbsp;histogram(<a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;K,V&gt;&nbsp;primary,
                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/ConcurrentMap.html?is-external=true" title="class or interface in java.util.concurrent">ConcurrentMap</a>&lt;C,<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Long.html?is-external=true" title="class or interface in java.lang">Long</a>&gt;&nbsp;histogram,
                      <a href="../../org/mapdb/Fun.Function2.html" title="interface in org.mapdb">Fun.Function2</a>&lt;C,K,V&gt;&nbsp;entryToCategory)</pre>
-<div class="block"><p>Binds Secondary Map so it it creates <a href="http://en.wikipedia.org/wiki/Histogram">histogram</a> from data in Primary Map. Histogram keeps count how many items are in each category. This method takes function which defines in what category each Primary Map entry is in.</p><p>If Secondary Map is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>primary</code> - Primary Map to create histrogram for</dd><dd><code>histogram</code> - Secondary Map to create histogram for, key is Category, value is number of items in category</dd><dd><code>entryToCategory</code> - returns Category in which entry from Primary Map belongs to.</dd><dd><code>K</code> - Key type in primary map</dd><dd><code>V</code> - Value type in primary map</dd><dd><code>C</code> - Category type</dd></dl>
+<div class="block"><p>Binds Secondary Map so it it creates <a href="http://en.wikipedia.org/wiki/Histogram">histogram</a> from data in Primary Map. Histogram keeps count how many items are in each category. This method takes function which defines in what category each Primary Map entry is in.</p><p>If Secondary Map is empty its content will be recreated from Primary Map. This binding is not persistent. You need to restore it every time store is reopened.</p><p>Type params:</p>
+<ul>
+  <li><code>&lt;K&gt;</code> - Key type in primary map</li>
+  <li><code>&lt;V&gt;</code> - Value type in primary map</li>
+  <li><code>&lt;C&gt;</code> - Category type</li>
+</ul></div>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>primary</code> - Primary Map to create histogram for</dd><dd><code>histogram</code> - Secondary Map to create histogram for, key is Category, value is number of items in category</dd><dd><code>entryToCategory</code> - returns Category in which entry from Primary Map belongs to.</dd></dl>
 </li>
 </ul>
 </li>

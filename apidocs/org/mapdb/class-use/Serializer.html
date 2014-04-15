@@ -80,7 +80,7 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>protected static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a></strong></code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.NodeSerializer.html" title="class in org.mapdb">BTreeMap.NodeSerializer</a>&lt;A,B&gt;</strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected static class&nbsp;</code></td>
@@ -264,7 +264,7 @@
 <td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#keySerializer">keySerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;</code></td>
 <td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#keySerializer">keySerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -284,7 +284,7 @@
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.SimpleQueue.Node.html" title="class in org.mapdb">Queues.SimpleQueue.Node</a>&gt;</code></td>
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.SimpleQueue.Node.html" title="class in org.mapdb">Queues.SimpleQueue.Node</a>&lt;<a href="../../../org/mapdb/Queues.SimpleQueue.html" title="type parameter in Queues.SimpleQueue">E</a>&gt;&gt;</code></td>
 <td class="colLast"><span class="strong">Queues.SimpleQueue.</span><code><strong><a href="../../../org/mapdb/Queues.SimpleQueue.html#nodeSerializer">nodeSerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -300,7 +300,7 @@
 <td class="colLast"><span class="strong">Atomic.Var.</span><code><strong><a href="../../../org/mapdb/Atomic.Var.html#serializer">serializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;</code></td>
 <td class="colLast"><span class="strong">DB.HTreeSetMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeSetMaker.html#serializer">serializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -350,11 +350,11 @@
 <td class="colLast"><span class="strong">HTreeMap.</span><code><strong><a href="../../../org/mapdb/HTreeMap.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;</code></td>
 <td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;</code></td>
 <td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -364,7 +364,7 @@
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colFirst"><code>protected <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
 <td class="colLast"><span class="strong">BTreeMap.NodeSerializer.</span><code><strong><a href="../../../org/mapdb/BTreeMap.NodeSerializer.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
 </tbody>
@@ -459,33 +459,26 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
-<td class="colLast"><span class="strong">EngineWrapper.DebugEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.DebugEngine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
-              A&nbsp;expectedOldValue,
-              A&nbsp;newValue,
-              <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.ImmutabilityCheckEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.SynchronizedEngineWrapper.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.SerializerCheckEngineWrapper.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">AsyncWriteEngine.</span><code><strong><a href="../../../org/mapdb/AsyncWriteEngine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
@@ -494,7 +487,7 @@
 <div class="block">Updates existing record in atomic <a href="http://en.wikipedia.org/wiki/Compare-and-swap">(Compare And Swap)</a> manner.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">Engine.</span><code><strong><a href="../../../org/mapdb/Engine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
@@ -503,74 +496,74 @@
 <div class="block">Updates existing record in atomic <a href="http://en.wikipedia.org/wiki/Compare-and-swap">(Compare And Swap)</a> manner.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">StoreWAL.</span><code><strong><a href="../../../org/mapdb/StoreWAL.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">TxEngine.</span><code><strong><a href="../../../org/mapdb/TxEngine.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">TxEngine.Tx.</span><code><strong><a href="../../../org/mapdb/TxEngine.Tx.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">Caches.LRU.</span><code><strong><a href="../../../org/mapdb/Caches.LRU.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">Caches.HashTable.</span><code><strong><a href="../../../org/mapdb/Caches.HashTable.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">Caches.WeakSoftRef.</span><code><strong><a href="../../../org/mapdb/Caches.WeakSoftRef.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;boolean</code></td>
 <td class="colLast"><span class="strong">Caches.HardRef.</span><code><strong><a href="../../../org/mapdb/Caches.HardRef.html#compareAndSwap(long, A, A, org.mapdb.Serializer)">compareAndSwap</a></strong>(long&nbsp;recid,
               A&nbsp;expectedOldValue,
               A&nbsp;newValue,
               <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="../../../org/mapdb/Atomic.Var.html" title="class in org.mapdb">Atomic.Var</a>&lt;E&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createAtomicVar(java.lang.String, E, org.mapdb.Serializer)">createAtomicVar</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                E&nbsp;initValue,
                <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;E&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createCircularQueue(java.lang.String, org.mapdb.Serializer, long)">createCircularQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer,
                    long&nbsp;size)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;E&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createQueue(java.lang.String, org.mapdb.Serializer, boolean)">createQueue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
            <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer,
            boolean&nbsp;useLocks)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected static long</code></td>
 <td class="colLast"><span class="strong">BTreeMap.</span><code><strong><a href="../../../org/mapdb/BTreeMap.html#createRootRef(org.mapdb.Engine, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator, int)">createRootRef</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
              <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&nbsp;keySer,
@@ -580,35 +573,30 @@
 <div class="block">creates empty root node and returns recid of its reference</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/BlockingQueue.html?is-external=true" title="class or interface in java.util.concurrent">BlockingQueue</a>&lt;E&gt;</code></td>
 <td class="colLast"><span class="strong">DB.</span><code><strong><a href="../../../org/mapdb/DB.html#createStack(java.lang.String, org.mapdb.Serializer, boolean)">createStack</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
            <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;E&gt;&nbsp;serializer,
            boolean&nbsp;useLocks)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">StoreHeap.</span><code><strong><a href="../../../org/mapdb/StoreHeap.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">StoreDirect.</span><code><strong><a href="../../../org/mapdb/StoreDirect.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
-<td class="colLast"><span class="strong">EngineWrapper.ReadOnlyEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
-      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
-</tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
-<td class="colLast"><span class="strong">EngineWrapper.DebugEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.DebugEngine.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
+<td class="colLast"><span class="strong">EngineWrapper.ReadOnlyEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#delete(long, org.mapdb.Serializer)">delete</a></strong>(long&nbsp;recid,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -672,9 +660,9 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected &lt;A&gt;&nbsp;A</code></td>
-<td class="colLast"><span class="strong">Store.</span><code><strong><a href="../../../org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, org.mapdb.DataInput2)">deserialize</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer,
+<td class="colLast"><span class="strong">Store.</span><code><strong><a href="../../../org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, java.io.DataInput)">deserialize</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer,
            int&nbsp;size,
-           <a href="../../../org/mapdb/DataInput2.html" title="class in org.mapdb">DataInput2</a>&nbsp;di)</code>&nbsp;</td>
+           <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;input)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
@@ -693,118 +681,108 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
-<td class="colLast"><span class="strong">EngineWrapper.DebugEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.DebugEngine.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
-   <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.ImmutabilityCheckEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.SynchronizedEngineWrapper.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.SerializerCheckEngineWrapper.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">AsyncWriteEngine.</span><code><strong><a href="../../../org/mapdb/AsyncWriteEngine.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Get existing record.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">Engine.</span><code><strong><a href="../../../org/mapdb/Engine.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>
 <div class="block">Get existing record.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">StoreWAL.</span><code><strong><a href="../../../org/mapdb/StoreWAL.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">TxEngine.</span><code><strong><a href="../../../org/mapdb/TxEngine.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">TxEngine.Tx.</span><code><strong><a href="../../../org/mapdb/TxEngine.Tx.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">Caches.LRU.</span><code><strong><a href="../../../org/mapdb/Caches.LRU.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">Caches.HashTable.</span><code><strong><a href="../../../org/mapdb/Caches.HashTable.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">Caches.WeakSoftRef.</span><code><strong><a href="../../../org/mapdb/Caches.WeakSoftRef.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">Caches.HardRef.</span><code><strong><a href="../../../org/mapdb/Caches.HardRef.html#get(long, org.mapdb.Serializer)">get</a></strong>(long&nbsp;recid,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected &lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">StoreDirect.</span><code><strong><a href="../../../org/mapdb/StoreDirect.html#get2(long, org.mapdb.Serializer)">get2</a></strong>(long&nbsp;ioRecid,
     <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected &lt;A&gt;&nbsp;A</code></td>
 <td class="colLast"><span class="strong">StoreWAL.</span><code><strong><a href="../../../org/mapdb/StoreWAL.html#get2(long, org.mapdb.Serializer)">get2</a></strong>(long&nbsp;ioRecid,
     <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#keySerializer(org.mapdb.Serializer)">keySerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;keySerializer)</code>
+<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#keySerializer(org.mapdb.Serializer)">keySerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;keySerializer)</code>
+<div class="block">keySerializer used to convert keys into/from binary form.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#keySerializerWrap(org.mapdb.Serializer)">keySerializerWrap</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;serializer)</code>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#keySerializerWrap(org.mapdb.Serializer)">keySerializerWrap</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>
-<div class="block">keySerializer used to convert keys into/from binary form.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><span class="strong">StoreHeap.</span><code><strong><a href="../../../org/mapdb/StoreHeap.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><span class="strong">StoreDirect.</span><code><strong><a href="../../../org/mapdb/StoreDirect.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
-<td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
-<td class="colLast"><span class="strong">EngineWrapper.ReadOnlyEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
-   <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
-</tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;long</code></td>
-<td class="colLast"><span class="strong">EngineWrapper.DebugEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.DebugEngine.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
+<td class="colLast"><span class="strong">EngineWrapper.ReadOnlyEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.ReadOnlyEngine.html#put(A, org.mapdb.Serializer)">put</a></strong>(A&nbsp;value,
    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -868,7 +846,7 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.HTreeSetMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeSetMaker.html#serializer(org.mapdb.Serializer)">serializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>
+<td class="colLast"><span class="strong">DB.HTreeSetMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeSetMaker.html#serializer(org.mapdb.Serializer)">serializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;serializer)</code>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
 </td>
 </tr>
@@ -924,29 +902,23 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
-<td class="colLast"><span class="strong">EngineWrapper.DebugEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.DebugEngine.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
-      A&nbsp;value,
-      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.ImmutabilityCheckEngine.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.SynchronizedEngineWrapper.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">EngineWrapper.SerializerCheckEngineWrapper.</span><code><strong><a href="../../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">AsyncWriteEngine.</span><code><strong><a href="../../../org/mapdb/AsyncWriteEngine.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
@@ -954,7 +926,7 @@
 <div class="block">Update existing record with new value.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">Engine.</span><code><strong><a href="../../../org/mapdb/Engine.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
@@ -962,57 +934,57 @@
 <div class="block">Update existing record with new value.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">StoreWAL.</span><code><strong><a href="../../../org/mapdb/StoreWAL.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">TxEngine.</span><code><strong><a href="../../../org/mapdb/TxEngine.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">TxEngine.Tx.</span><code><strong><a href="../../../org/mapdb/TxEngine.Tx.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">Caches.LRU.</span><code><strong><a href="../../../org/mapdb/Caches.LRU.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">Caches.HashTable.</span><code><strong><a href="../../../org/mapdb/Caches.HashTable.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">Caches.WeakSoftRef.</span><code><strong><a href="../../../org/mapdb/Caches.WeakSoftRef.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
 <td class="colLast"><span class="strong">Caches.HardRef.</span><code><strong><a href="../../../org/mapdb/Caches.HardRef.html#update(long, A, org.mapdb.Serializer)">update</a></strong>(long&nbsp;recid,
       A&nbsp;value,
       <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</code>
+<td class="colLast"><span class="strong">DB.HTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;valueSerializer)</code>
 <div class="block">valueSerializer used to convert values into/from binary form.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../../org/mapdb/DB.BTreeMapMaker.html" title="class in org.mapdb">DB.BTreeMapMaker</a></code></td>
-<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</code>
+<td class="colLast"><span class="strong">DB.BTreeMapMaker.</span><code><strong><a href="../../../org/mapdb/DB.BTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;valueSerializer)</code>
 <div class="block">valueSerializer used to convert values into/from binary form.</div>
 </td>
 </tr>
@@ -1034,42 +1006,42 @@
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html#BTreeKeySerializer.Tuple2KeySerializer(java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple2KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple2KeySerializer">A</a>&gt;&nbsp;aComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple2KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple2KeySerializer">B</a>&gt;&nbsp;bSerializer)</code>
 <div class="block">Construct new Tuple2 Key Serializer.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html#BTreeKeySerializer.Tuple2KeySerializer(java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple2KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple2KeySerializer">A</a>&gt;&nbsp;aComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple2KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple2KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple2KeySerializer">B</a>&gt;&nbsp;bSerializer)</code>
 <div class="block">Construct new Tuple2 Key Serializer.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html#BTreeKeySerializer.Tuple3KeySerializer(java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple3KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">A</a>&gt;&nbsp;aComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">B</a>&gt;&nbsp;bComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">C</a>&gt;&nbsp;cSerializer)</code>
 <div class="block">Construct new Tuple3 Key Serializer.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html#BTreeKeySerializer.Tuple3KeySerializer(java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple3KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">A</a>&gt;&nbsp;aComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">B</a>&gt;&nbsp;bComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">C</a>&gt;&nbsp;cSerializer)</code>
 <div class="block">Construct new Tuple3 Key Serializer.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html#BTreeKeySerializer.Tuple3KeySerializer(java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple3KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">A</a>&gt;&nbsp;aComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">B</a>&gt;&nbsp;bComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple3KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple3KeySerializer">C</a>&gt;&nbsp;cSerializer)</code>
 <div class="block">Construct new Tuple3 Key Serializer.</div>
 </td>
 </tr>
@@ -1077,10 +1049,10 @@
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html#BTreeKeySerializer.Tuple4KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple4KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">A</a>&gt;&nbsp;aComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">B</a>&gt;&nbsp;bComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">C</a>&gt;&nbsp;cComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">D</a>&gt;&nbsp;dSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1088,10 +1060,10 @@
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html#BTreeKeySerializer.Tuple4KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple4KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">A</a>&gt;&nbsp;aComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">B</a>&gt;&nbsp;bComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">C</a>&gt;&nbsp;cComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">D</a>&gt;&nbsp;dSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1099,10 +1071,10 @@
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html#BTreeKeySerializer.Tuple4KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple4KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">A</a>&gt;&nbsp;aComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">B</a>&gt;&nbsp;bComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">C</a>&gt;&nbsp;cComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">D</a>&gt;&nbsp;dSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1110,10 +1082,10 @@
 <td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html#BTreeKeySerializer.Tuple4KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple4KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">A</a>&gt;&nbsp;aComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">B</a>&gt;&nbsp;bComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">C</a>&gt;&nbsp;cComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple4KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple4KeySerializer">D</a>&gt;&nbsp;dSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1122,11 +1094,11 @@
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">E</a>&gt;&nbsp;eSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1135,11 +1107,11 @@
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">E</a>&gt;&nbsp;eSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1148,11 +1120,11 @@
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">E</a>&gt;&nbsp;eSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1161,11 +1133,11 @@
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">E</a>&gt;&nbsp;eSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1174,41 +1146,11 @@
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer)</code>
-<div class="block">Construct new Tuple4 Key Serializer.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html#BTreeKeySerializer.Tuple6KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple6KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aComparator,
-                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bComparator,
-                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cComparator,
-                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dComparator,
-                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;fSerializer)</code>
-<div class="block">Construct new Tuple4 Key Serializer.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html#BTreeKeySerializer.Tuple6KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple6KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aComparator,
-                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bComparator,
-                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cComparator,
-                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dComparator,
-                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;fSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple5KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple5KeySerializer">E</a>&gt;&nbsp;eSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1218,12 +1160,12 @@
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;fSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">F</a>&gt;&nbsp;fSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1233,12 +1175,12 @@
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;fSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">F</a>&gt;&nbsp;fSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1248,12 +1190,12 @@
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;fSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">F</a>&gt;&nbsp;fSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1263,12 +1205,42 @@
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dComparator,
                                       <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eComparator,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;aSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;bSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;cSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;dSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;eSerializer,
-                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;fSerializer)</code>
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">F</a>&gt;&nbsp;fSerializer)</code>
+<div class="block">Construct new Tuple4 Key Serializer.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html#BTreeKeySerializer.Tuple6KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple6KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aComparator,
+                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bComparator,
+                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cComparator,
+                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dComparator,
+                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eComparator,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">F</a>&gt;&nbsp;fSerializer)</code>
+<div class="block">Construct new Tuple4 Key Serializer.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html#BTreeKeySerializer.Tuple6KeySerializer(java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, java.util.Comparator, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer, org.mapdb.Serializer)">BTreeKeySerializer.Tuple6KeySerializer</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aComparator,
+                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bComparator,
+                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cComparator,
+                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dComparator,
+                                      <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eComparator,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">A</a>&gt;&nbsp;aSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">B</a>&gt;&nbsp;bSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">C</a>&gt;&nbsp;cSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">D</a>&gt;&nbsp;dSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">E</a>&gt;&nbsp;eSerializer,
+                                      <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeKeySerializer.Tuple6KeySerializer.html" title="type parameter in BTreeKeySerializer.Tuple6KeySerializer">F</a>&gt;&nbsp;fSerializer)</code>
 <div class="block">Construct new Tuple4 Key Serializer.</div>
 </td>
 </tr>
@@ -1280,7 +1252,7 @@
                        int&nbsp;numberOfNodeMetas)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator, int)">BTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/BTreeMap.html#BTreeMap(org.mapdb.Engine, long, int, boolean, long, org.mapdb.BTreeKeySerializer, org.mapdb.Serializer, java.util.Comparator, int, boolean)">BTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
         long&nbsp;rootRecidRef,
         int&nbsp;maxNodeSize,
         boolean&nbsp;valsOutsideNodes,
@@ -1288,7 +1260,8 @@
         <a href="../../../org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;keySerializer,
         <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">V</a>&gt;&nbsp;valueSerializer,
         <a href="http://docs.oracle.com/javase/6/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../org/mapdb/BTreeMap.html" title="type parameter in BTreeMap">K</a>&gt;&nbsp;comparator,
-        int&nbsp;numberOfNodeMetas)</code>
+        int&nbsp;numberOfNodeMetas,
+        boolean&nbsp;disableLocks)</code>
 <div class="block">Constructor used to create new BTreeMap.</div>
 </td>
 </tr>
@@ -1297,7 +1270,7 @@
                                           <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;item)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher, boolean)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
         long&nbsp;counterRecid,
         int&nbsp;hashSalt,
         long[]&nbsp;segmentRecids,
@@ -1311,12 +1284,13 @@
         long[]&nbsp;expireHeads,
         long[]&nbsp;expireTails,
         <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator,
-        <a href="../../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>
+        <a href="../../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher,
+        boolean&nbsp;disableLocks)</code>
 <div class="block">Opens HTreeMap</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colLast"><code><strong><a href="../../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher, boolean)">HTreeMap</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
         long&nbsp;counterRecid,
         int&nbsp;hashSalt,
         long[]&nbsp;segmentRecids,
@@ -1330,13 +1304,14 @@
         long[]&nbsp;expireHeads,
         long[]&nbsp;expireTails,
         <a href="../../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator,
-        <a href="../../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>
+        <a href="../../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher,
+        boolean&nbsp;disableLocks)</code>
 <div class="block">Opens HTreeMap</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><strong><a href="../../../org/mapdb/Queues.CircularQueue.html#Queues.CircularQueue(org.mapdb.Engine, org.mapdb.Serializer, long, long, long)">Queues.CircularQueue</a></strong>(<a href="../../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
-                    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer,
+                    <a href="../../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;<a href="../../../org/mapdb/Queues.CircularQueue.html" title="type parameter in Queues.CircularQueue">E</a>&gt;&nbsp;serializer,
                     long&nbsp;headRecid,
                     long&nbsp;headInsertRecid,
                     long&nbsp;size)</code>&nbsp;</td>

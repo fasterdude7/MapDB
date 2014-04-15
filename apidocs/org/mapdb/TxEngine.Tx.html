@@ -204,6 +204,14 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#closeListenerRegister(java.lang.Runnable)">closeListenerRegister</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#closeListenerUnregister(java.lang.Runnable)">closeListenerUnregister</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#commit()">commit</a></strong>()</code>
 <div class="block">Makes all changes made since the previous commit/rollback permanent.</div>
 </td>
@@ -237,7 +245,9 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#getSerializerPojo()">getSerializerPojo</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#getSerializerPojo()">getSerializerPojo</a></strong>()</code>
+<div class="block">Returns default serializer associated with this engine.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
@@ -276,23 +286,15 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#registerCloseListener(java.lang.Runnable)">registerCloseListener</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Undoes all changes made in the current transaction.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#snapshot()">snapshot</a></strong>()</code>
 <div class="block">Returns read-only snapshot of data in Engine.</div>
 </td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/TxEngine.Tx.html#unregisterCloseListener(java.lang.Runnable)">unregisterCloseListener</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
@@ -672,35 +674,37 @@ implements <a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">
 <li class="blockList">
 <h4>getSerializerPojo</h4>
 <pre>public&nbsp;<a href="../../org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a>&nbsp;getSerializerPojo()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Engine.html#getSerializerPojo()">Engine</a></code></strong></div>
+<div class="block"><p>Returns default serializer associated with this engine. The default serializer will be moved from Engine into DB, so it is deprecated now and this method will be removed.</p></div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../org/mapdb/Engine.html#getSerializerPojo()">getSerializerPojo</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="registerCloseListener(java.lang.Runnable)">
+<a name="closeListenerRegister(java.lang.Runnable)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>registerCloseListener</h4>
-<pre>public&nbsp;void&nbsp;registerCloseListener(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</pre>
+<h4>closeListenerRegister</h4>
+<pre>public&nbsp;void&nbsp;closeListenerRegister(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#registerCloseListener(java.lang.Runnable)">registerCloseListener</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dd><code><a href="../../org/mapdb/Engine.html#closeListenerRegister(java.lang.Runnable)">closeListenerRegister</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="unregisterCloseListener(java.lang.Runnable)">
+<a name="closeListenerUnregister(java.lang.Runnable)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>unregisterCloseListener</h4>
-<pre>public&nbsp;void&nbsp;unregisterCloseListener(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</pre>
+<h4>closeListenerUnregister</h4>
+<pre>public&nbsp;void&nbsp;closeListenerUnregister(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Engine.html#unregisterCloseListener(java.lang.Runnable)">unregisterCloseListener</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
+<dd><code><a href="../../org/mapdb/Engine.html#closeListenerUnregister(java.lang.Runnable)">closeListenerUnregister</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></dd>
 </dl>
 </li>
 </ul>

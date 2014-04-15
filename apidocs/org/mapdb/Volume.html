@@ -60,13 +60,13 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>
@@ -150,33 +150,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </table>
 </li>
 </ul>
-<!-- =========== FIELD SUMMARY =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field_summary">
-<!--   -->
-</a>
-<h3>Field Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
-<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Field and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#CHUNK_SHIFT">CHUNK_SHIFT</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#CHUNK_SIZE">CHUNK_SIZE</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#CHUNK_SIZE_MOD_MASK">CHUNK_SIZE_MOD_MASK</a></strong></code>&nbsp;</td>
-</tr>
-</table>
-</li>
-</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_summary">
@@ -222,17 +195,21 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, java.io.File, long)">fileFactory</a></strong>(boolean&nbsp;readOnly,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#fileFactory(java.io.File, int, boolean, long, int, int)">fileFactory</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
            int&nbsp;rafMode,
-           <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
-           long&nbsp;sizeLimit)</code>&nbsp;</td>
+           boolean&nbsp;readOnly,
+           long&nbsp;sizeLimit,
+           int&nbsp;chunkShift,
+           int&nbsp;sizeIncrement)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">fileFactory</a></strong>(boolean&nbsp;readOnly,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#fileFactory(java.io.File, int, boolean, long, int, int, java.io.File, java.io.File)">fileFactory</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
            int&nbsp;rafMode,
+           boolean&nbsp;readOnly,
            long&nbsp;sizeLimit,
-           <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
+           int&nbsp;chunkShift,
+           int&nbsp;sizeIncrement,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;physFile,
            <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;transLogFile)</code>&nbsp;</td>
 </tr>
@@ -241,7 +218,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#getByte(long)">getByte</a></strong>(long&nbsp;offset)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>abstract <a href="../../org/mapdb/DataInput2.html" title="class in org.mapdb">DataInput2</a></code></td>
+<td class="colFirst"><code>abstract <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#getDataInput(long, int)">getDataInput</a></strong>(long&nbsp;offset,
             int&nbsp;size)</code>&nbsp;</td>
 </tr>
@@ -287,8 +264,9 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#memoryFactory(boolean, long)">memoryFactory</a></strong>(boolean&nbsp;useDirectBuffer,
-             long&nbsp;sizeLimit)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#memoryFactory(boolean, long, int)">memoryFactory</a></strong>(boolean&nbsp;useDirectBuffer,
+             long&nbsp;sizeLimit,
+             int&nbsp;chunkShift)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
@@ -355,10 +333,12 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long)">volumeForFile</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;f,
+<td class="colLast"><code><strong><a href="../../org/mapdb/Volume.html#volumeForFile(java.io.File, boolean, boolean, long, int, int)">volumeForFile</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;f,
              boolean&nbsp;useRandomAccessFile,
              boolean&nbsp;readOnly,
-             long&nbsp;sizeLimit)</code>&nbsp;</td>
+             long&nbsp;sizeLimit,
+             int&nbsp;chunkShift,
+             int&nbsp;sizeIncrement)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
@@ -384,44 +364,6 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ============ FIELD DETAIL =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field_detail">
-<!--   -->
-</a>
-<h3>Field Detail</h3>
-<a name="CHUNK_SHIFT">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>CHUNK_SHIFT</h4>
-<pre>public static final&nbsp;int CHUNK_SHIFT</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.Volume.CHUNK_SHIFT">Constant Field Values</a></dd></dl>
-</li>
-</ul>
-<a name="CHUNK_SIZE">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>CHUNK_SIZE</h4>
-<pre>public static final&nbsp;int CHUNK_SIZE</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.Volume.CHUNK_SIZE">Constant Field Values</a></dd></dl>
-</li>
-</ul>
-<a name="CHUNK_SIZE_MOD_MASK">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>CHUNK_SIZE_MOD_MASK</h4>
-<pre>public static final&nbsp;int CHUNK_SIZE_MOD_MASK</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.Volume.CHUNK_SIZE_MOD_MASK">Constant Field Values</a></dd></dl>
-</li>
-</ul>
-</li>
-</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor_detail">
@@ -561,8 +503,8 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getDataInput</h4>
-<pre>public abstract&nbsp;<a href="../../org/mapdb/DataInput2.html" title="class in org.mapdb">DataInput2</a>&nbsp;getDataInput(long&nbsp;offset,
-                      int&nbsp;size)</pre>
+<pre>public abstract&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;getDataInput(long&nbsp;offset,
+                     int&nbsp;size)</pre>
 </li>
 </ul>
 <a name="close()">
@@ -616,7 +558,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>putUnsignedShort</h4>
-<pre>public final&nbsp;void&nbsp;putUnsignedShort(long&nbsp;offset,
+<pre>public&nbsp;void&nbsp;putUnsignedShort(long&nbsp;offset,
                     int&nbsp;value)</pre>
 </li>
 </ul>
@@ -626,7 +568,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>getUnsignedShort</h4>
-<pre>public final&nbsp;int&nbsp;getUnsignedShort(long&nbsp;offset)</pre>
+<pre>public&nbsp;int&nbsp;getUnsignedShort(long&nbsp;offset)</pre>
 </li>
 </ul>
 <a name="getUnsignedByte(long)">
@@ -699,7 +641,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public&nbsp;long&nbsp;getPackedLong(long&nbsp;pos)</pre>
 </li>
 </ul>
-<a name="volumeForFile(java.io.File, boolean, boolean, long)">
+<a name="volumeForFile(java.io.File, boolean, boolean, long, int, int)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -708,43 +650,50 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <pre>public static&nbsp;<a href="../../org/mapdb/Volume.html" title="class in org.mapdb">Volume</a>&nbsp;volumeForFile(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;f,
                    boolean&nbsp;useRandomAccessFile,
                    boolean&nbsp;readOnly,
-                   long&nbsp;sizeLimit)</pre>
+                   long&nbsp;sizeLimit,
+                   int&nbsp;chunkShift,
+                   int&nbsp;sizeIncrement)</pre>
 </li>
 </ul>
-<a name="fileFactory(boolean, int, java.io.File, long)">
+<a name="fileFactory(java.io.File, int, boolean, long, int, int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>fileFactory</h4>
-<pre>public static&nbsp;<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;fileFactory(boolean&nbsp;readOnly,
+<pre>public static&nbsp;<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;fileFactory(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
                          int&nbsp;rafMode,
-                         <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
-                         long&nbsp;sizeLimit)</pre>
-</li>
-</ul>
-<a name="fileFactory(boolean, int, long, java.io.File, java.io.File, java.io.File)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>fileFactory</h4>
-<pre>public static&nbsp;<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;fileFactory(boolean&nbsp;readOnly,
-                         int&nbsp;rafMode,
+                         boolean&nbsp;readOnly,
                          long&nbsp;sizeLimit,
-                         <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
+                         int&nbsp;chunkShift,
+                         int&nbsp;sizeIncrement)</pre>
+</li>
+</ul>
+<a name="fileFactory(java.io.File, int, boolean, long, int, int, java.io.File, java.io.File)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fileFactory</h4>
+<pre>public static&nbsp;<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;fileFactory(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;indexFile,
+                         int&nbsp;rafMode,
+                         boolean&nbsp;readOnly,
+                         long&nbsp;sizeLimit,
+                         int&nbsp;chunkShift,
+                         int&nbsp;sizeIncrement,
                          <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;physFile,
                          <a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;transLogFile)</pre>
 </li>
 </ul>
-<a name="memoryFactory(boolean, long)">
+<a name="memoryFactory(boolean, long, int)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>memoryFactory</h4>
 <pre>public static&nbsp;<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;memoryFactory(boolean&nbsp;useDirectBuffer,
-                           long&nbsp;sizeLimit)</pre>
+                           long&nbsp;sizeLimit,
+                           int&nbsp;chunkShift)</pre>
 </li>
 </ul>
 <a name="volumeTransfer(long, org.mapdb.Volume, org.mapdb.Volume)">
@@ -814,13 +763,13 @@ hljs.initHighlightingOnLoad();
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
-<li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field_detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor_detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_detail">Method</a></li>
 </ul>

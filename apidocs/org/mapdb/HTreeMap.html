@@ -311,7 +311,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">HTreeMap</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
+<td class="colOne"><code><strong><a href="../../org/mapdb/HTreeMap.html#HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher, boolean)">HTreeMap</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine,
         long&nbsp;counterRecid,
         int&nbsp;hashSalt,
         long[]&nbsp;segmentRecids,
@@ -325,7 +325,8 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
         long[]&nbsp;expireHeads,
         long[]&nbsp;expireTails,
         <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator,
-        <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>
+        <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher,
+        boolean&nbsp;disableLocks)</code>
 <div class="block">Opens HTreeMap</div>
 </td>
 </tr>
@@ -346,152 +347,152 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#addModificationListener(org.mapdb.Bind.MapListener)">addModificationListener</a></strong>(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;listener)</code>
-<div class="block">Add new modification listener notified when Map has been updated</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#clear()">clear</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#close()">close</a></strong>()</code>
 <div class="block">Closes underlying storage and releases all resources.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#containsKey(java.lang.Object)">containsKey</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#containsValue(java.lang.Object)">containsValue</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Map.Entry.html?is-external=true" title="class or interface in java.util">Map.Entry</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#entrySet()">entrySet</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireCheckSegment(int)">expireCheckSegment</a></strong>(int&nbsp;segment)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireLinkAdd(int, long, long, int)">expireLinkAdd</a></strong>(int&nbsp;segment,
              long&nbsp;expireNodeRecid,
              long&nbsp;keyRecid,
              int&nbsp;hash)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireLinkBump(int, long, boolean)">expireLinkBump</a></strong>(int&nbsp;segment,
               long&nbsp;nodeRecid,
               boolean&nbsp;access)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireLinkRemove(int, long)">expireLinkRemove</a></strong>(int&nbsp;segment,
                 long&nbsp;nodeRecid)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/HTreeMap.ExpireLinkNode.html" title="class in org.mapdb">HTreeMap.ExpireLinkNode</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expireLinkRemoveLast(int)">expireLinkRemoveLast</a></strong>(int&nbsp;segment)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expirePurge()">expirePurge</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#expirePurgeSegment(int, long)">expirePurgeSegment</a></strong>(int&nbsp;seg,
                   long&nbsp;removePerSegment)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#get(java.lang.Object)">get</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getEngine()">getEngine</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/HTreeMap.LinkedNode.html" title="class in org.mapdb">HTreeMap.LinkedNode</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getInner(java.lang.Object, int, int)">getInner</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;o,
         int&nbsp;h,
         int&nbsp;segment)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getMaxExpireTime()">getMaxExpireTime</a></strong>()</code>
 <div class="block">Returns maximal (newest) expiration timestamp</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getMinExpireTime()">getMinExpireTime</a></strong>()</code>
 <div class="block">Returns minimal (oldest) expiration timestamp</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#getPeek(java.lang.Object)">getPeek</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</code>
 <div class="block">Return given value, without updating cache statistics if <code>expireAccess()</code> is true It also does not use <code>valueCreator</code> if value is not found (always returns null if not found)</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#hash(java.lang.Object)">hash</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#isEmpty()">isEmpty</a></strong>()</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#keySet()">keySet</a></strong>()</code>&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#modificationListenerAdd(org.mapdb.Bind.MapListener)">modificationListenerAdd</a></strong>(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;listener)</code>
+<div class="block">Add new modification listener notified when Map has been updated</div>
+</td>
+</tr>
 <tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#modificationListenerRemove(org.mapdb.Bind.MapListener)">modificationListenerRemove</a></strong>(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;listener)</code>
+<div class="block">Remove registered notification listener</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#notify(K, V, V)">notify</a></strong>(<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&nbsp;key,
       <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;oldValue,
       <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;newValue)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected static long[]</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#preallocateSegments(org.mapdb.Engine)">preallocateSegments</a></strong>(<a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a>&nbsp;engine)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#put(K, V)">put</a></strong>(<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&nbsp;key,
    <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#putIfAbsent(K, V)">putIfAbsent</a></strong>(<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&nbsp;key,
            <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#remove(java.lang.Object)">remove</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#remove(java.lang.Object, java.lang.Object)">remove</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key,
       <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected <a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#removeInternal(java.lang.Object, int, int, boolean)">removeInternal</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;key,
               int&nbsp;segment,
               int&nbsp;h,
               boolean&nbsp;removeExpire)</code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/HTreeMap.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener</a></strong>(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;listener)</code>
-<div class="block">Remove registered notification listener</div>
-</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a></code></td>
@@ -833,7 +834,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher)">
+<a name="HTreeMap(org.mapdb.Engine, long, int, long[], org.mapdb.Serializer, org.mapdb.Serializer, long, long, long, long, long, long[], long[], org.mapdb.Fun.Function1, org.mapdb.Hasher, boolean)">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -853,7 +854,8 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
         long[]&nbsp;expireHeads,
         long[]&nbsp;expireTails,
         <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>&gt;&nbsp;valueCreator,
-        <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</pre>
+        <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher,
+        boolean&nbsp;disableLocks)</pre>
 <div class="block"><p>Opens HTreeMap</p></div>
 </li>
 </ul>
@@ -1263,33 +1265,33 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurren
 <dl><dt><span class="strong">Returns:</span></dt><dd>snapshot</dd></dl>
 </li>
 </ul>
-<a name="addModificationListener(org.mapdb.Bind.MapListener)">
+<a name="modificationListenerAdd(org.mapdb.Bind.MapListener)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addModificationListener</h4>
-<pre>public&nbsp;void&nbsp;addModificationListener(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;listener)</pre>
-<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Bind.MapWithModificationListener.html#addModificationListener(org.mapdb.Bind.MapListener)">Bind.MapWithModificationListener</a></code></strong></div>
+<h4>modificationListenerAdd</h4>
+<pre>public&nbsp;void&nbsp;modificationListenerAdd(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;listener)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Bind.MapWithModificationListener.html#modificationListenerAdd(org.mapdb.Bind.MapListener)">Bind.MapWithModificationListener</a></code></strong></div>
 <div class="block"><p>Add new modification listener notified when Map has been updated</p></div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Bind.MapWithModificationListener.html#addModificationListener(org.mapdb.Bind.MapListener)">addModificationListener</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></dd>
+<dd><code><a href="../../org/mapdb/Bind.MapWithModificationListener.html#modificationListenerAdd(org.mapdb.Bind.MapListener)">modificationListenerAdd</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - callback interface notified when map changes</dd></dl>
 </li>
 </ul>
-<a name="removeModificationListener(org.mapdb.Bind.MapListener)">
+<a name="modificationListenerRemove(org.mapdb.Bind.MapListener)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>removeModificationListener</h4>
-<pre>public&nbsp;void&nbsp;removeModificationListener(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;listener)</pre>
-<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Bind.MapWithModificationListener.html#removeModificationListener(org.mapdb.Bind.MapListener)">Bind.MapWithModificationListener</a></code></strong></div>
+<h4>modificationListenerRemove</h4>
+<pre>public&nbsp;void&nbsp;modificationListenerRemove(<a href="../../org/mapdb/Bind.MapListener.html" title="interface in org.mapdb">Bind.MapListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;&nbsp;listener)</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../org/mapdb/Bind.MapWithModificationListener.html#modificationListenerRemove(org.mapdb.Bind.MapListener)">Bind.MapWithModificationListener</a></code></strong></div>
 <div class="block"><p>Remove registered notification listener</p></div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../org/mapdb/Bind.MapWithModificationListener.html#removeModificationListener(org.mapdb.Bind.MapListener)">removeModificationListener</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></dd>
+<dd><code><a href="../../org/mapdb/Bind.MapWithModificationListener.html#modificationListenerRemove(org.mapdb.Bind.MapListener)">modificationListenerRemove</a></code>&nbsp;in interface&nbsp;<code><a href="../../org/mapdb/Bind.MapWithModificationListener.html" title="interface in org.mapdb">Bind.MapWithModificationListener</a>&lt;<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">K</a>,<a href="../../org/mapdb/HTreeMap.html" title="type parameter in HTreeMap">V</a>&gt;</code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>listener</code> - callback interface notified when map changes</dd></dl>
 </li>
 </ul>

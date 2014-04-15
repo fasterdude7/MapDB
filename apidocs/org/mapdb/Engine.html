@@ -86,7 +86,7 @@
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a>, <a href="../../org/mapdb/Caches.HardRef.html" title="class in org.mapdb">Caches.HardRef</a>, <a href="../../org/mapdb/Caches.HashTable.html" title="class in org.mapdb">Caches.HashTable</a>, <a href="../../org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a>, <a href="../../org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a>, <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.CloseOnJVMShutdown.html" title="class in org.mapdb">EngineWrapper.CloseOnJVMShutdown</a>, <a href="../../org/mapdb/EngineWrapper.DebugEngine.html" title="class in org.mapdb">EngineWrapper.DebugEngine</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a>, <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>, <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a>, <a href="../../org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a>, <a href="../../org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a>, <a href="../../org/mapdb/TxEngine.html" title="class in org.mapdb">TxEngine</a>, <a href="../../org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></dd>
+<dd><a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb">AsyncWriteEngine</a>, <a href="../../org/mapdb/Caches.HardRef.html" title="class in org.mapdb">Caches.HardRef</a>, <a href="../../org/mapdb/Caches.HashTable.html" title="class in org.mapdb">Caches.HashTable</a>, <a href="../../org/mapdb/Caches.LRU.html" title="class in org.mapdb">Caches.LRU</a>, <a href="../../org/mapdb/Caches.WeakSoftRef.html" title="class in org.mapdb">Caches.WeakSoftRef</a>, <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb">EngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.CloseOnJVMShutdown.html" title="class in org.mapdb">EngineWrapper.CloseOnJVMShutdown</a>, <a href="../../org/mapdb/EngineWrapper.ImmutabilityCheckEngine.html" title="class in org.mapdb">EngineWrapper.ImmutabilityCheckEngine</a>, <a href="../../org/mapdb/EngineWrapper.ReadOnlyEngine.html" title="class in org.mapdb">EngineWrapper.ReadOnlyEngine</a>, <a href="../../org/mapdb/EngineWrapper.SerializerCheckEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SerializerCheckEngineWrapper</a>, <a href="../../org/mapdb/EngineWrapper.SynchronizedEngineWrapper.html" title="class in org.mapdb">EngineWrapper.SynchronizedEngineWrapper</a>, <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a>, <a href="../../org/mapdb/StoreDirect.html" title="class in org.mapdb">StoreDirect</a>, <a href="../../org/mapdb/StoreHeap.html" title="class in org.mapdb">StoreHeap</a>, <a href="../../org/mapdb/StoreWAL.html" title="class in org.mapdb">StoreWAL</a>, <a href="../../org/mapdb/TxEngine.html" title="class in org.mapdb">TxEngine</a>, <a href="../../org/mapdb/TxEngine.Tx.html" title="class in org.mapdb">TxEngine.Tx</a></dd>
 </dl>
 <hr>
 <br>
@@ -94,13 +94,10 @@
 <div class="block"><p>Centerpiece for record management, <code>Engine</code> is simple key value store. Engine is low-level interface and is not meant to be used directly by user. For most operations user should use <a href="../../org/mapdb/DB.html" title="class in org.mapdb"><code>DB</code></a> class.</p><p>In this store key is primitive <code>long</code> number, typically pointer to index table. Value is class instance. To turn value into/from binary form serializer is required as extra argument for most operations.</p><p>Unlike other DBs MapDB does not expect user to (de)serialize data before they are passed as arguments. Instead MapDB controls (de)serialization itself. This gives DB a lot of flexibility: for example instances may be held in cache to minimise number of deserializations, or modified instance can be placed into queue and asynchronously written on background thread.</p><p>There is <a href="../../org/mapdb/Store.html" title="class in org.mapdb"><code>Store</code></a> subinterface for raw persistence Most of MapDB features comes from <a href="../../org/mapdb/EngineWrapper.html" title="class in org.mapdb"><code>EngineWrapper</code></a>s, which are stacked on top of each other to provide asynchronous writes, instance cache, encryption etc.. <code>Engine</code> stack is very elegant and uniform way to handle additional functionality. Other DBs need an ORM framework to achieve similar features.</p><p>In default configuration MapDB runs with this <code>Engine</code> stack:</p>
 <ul>
   <li><strong>DISK</strong> - raw file or memory</li>
-  <li><code>StoraWAL</code> - permanent record store with transactions</li>
-  <li><a href="../../org/mapdb/AsyncWriteEngine.html" title="class in org.mapdb"><code>AsyncWriteEngine</code></a> - asynchronous writes to storage</li>
-  <li><code>EngineWrapper.ByteTransformEngine</code> - compression or encryption (optional)</li>
+  <li><a href="../../org/mapdb/StoreWAL.html" title="class in org.mapdb"><code>StoreWAL</code></a> - permanent record store with transactions</li>
   <li><a href="../../org/mapdb/Caches.HashTable.html" title="class in org.mapdb"><code>Caches.HashTable</code></a> - instance cache</li>
-  <li><a href="../../org/mapdb/TxEngine.html" title="class in org.mapdb"><code>TxEngine</code></a> - support for snapshots</li>
   <li><strong>USER</strong> - <a href="../../org/mapdb/DB.html" title="class in org.mapdb"><code>DB</code></a> and collections</li>
-</ul><p>Engine uses <code>recid</code> to identify records. There is zero error handling in case recid is invalid (random number or already deleted record). Passing illegal recid may result into anything (return null, throw EOF or even corrupt store). Engine is considered low-level component and it is responsibility of upper layers (collections) to ensure recid is consistent. Lack of error handling is trade of for speed (similar way as manual memory management in C++) <p/> Engine must support <code>null</code> record values. You may insert, update and fetch null records. Nulls play important role in recid preallocation and asynchronous writes. <p/> Recid can be reused after it was deleted. If your application relies on unique being unique, you should update record with null value, instead of delete. Null record consumes only 8 bytes in store and is preserved during defragmentation.</p></div>
+</ul><p>TODO document more examples of Engine wrappers</p><p>Engine uses <code>recid</code> to identify records. There is zero error handling in case recid is invalid (random number or already deleted record). Passing illegal recid may result into anything (return null, throw EOF or even corrupt store). Engine is considered low-level component and it is responsibility of upper layers (collections) to ensure recid is consistent. Lack of error handling is trade of for speed (similar way as manual memory management in C++) <p/> Engine must support <code>null</code> record values. You may insert, update and fetch null records. Nulls play important role in recid preallocation and asynchronous writes. <p/> Recid can be reused after it was deleted. If your application relies on unique being unique, you should update record with null value, instead of delete. Null record consumes only 8 bytes in store and is preserved during defragmentation.</p></div>
 <dl><dt><span class="strong">Author:</span></dt>
   <dd>Jan Kotek</dd></dl>
 </li>
@@ -174,6 +171,14 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#closeListenerRegister(java.lang.Runnable)">closeListenerRegister</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#closeListenerUnregister(java.lang.Runnable)">closeListenerUnregister</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#commit()">commit</a></strong>()</code>
 <div class="block">Makes all changes made since the previous commit/rollback permanent.</div>
 </td>
@@ -207,7 +212,9 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#getSerializerPojo()">getSerializerPojo</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#getSerializerPojo()">getSerializerPojo</a></strong>()</code>
+<div class="block"><strong>Deprecated.</strong>&nbsp;</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
@@ -242,23 +249,15 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#registerCloseListener(java.lang.Runnable)">registerCloseListener</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#rollback()">rollback</a></strong>()</code>
 <div class="block">Undoes all changes made in the current transaction.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/Engine.html" title="interface in org.mapdb">Engine</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#snapshot()">snapshot</a></strong>()</code>
 <div class="block">Returns read-only snapshot of data in Engine.</div>
 </td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/Engine.html#unregisterCloseListener(java.lang.Runnable)">unregisterCloseListener</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>&lt;A&gt;&nbsp;void</code></td>
@@ -364,7 +363,7 @@
 <pre>&lt;A&gt;&nbsp;long&nbsp;put(A&nbsp;value,
            <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
 <div class="block"><p>Insert new record.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>value</code> - records to be added</dd><dd><code>serializer</code> - used to convert record into/from binary form</dd><dd><code>A</code> - type of record</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>value</code> - records to be added</dd><dd><code>serializer</code> - used to convert record into/from binary form</dd>
 <dt><span class="strong">Returns:</span></dt><dd>recid (record identifier) under which record is stored.</dd></dl>
 </li>
 </ul>
@@ -377,7 +376,7 @@
 <pre>&lt;A&gt;&nbsp;A&nbsp;get(long&nbsp;recid,
         <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
 <div class="block"><p>Get existing record. <p/> Recid must be a number returned by &lsquo;put&rsquo; method. Behaviour for invalid recid (random number or already deleted record) is not defined, typically it returns null or throws &lsquo;EndOfFileException&rsquo;</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted</dd><dd><code>serializer</code> - used to deserialize record from binary form</dd><dd><code>A</code> - record type</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted</dd><dd><code>serializer</code> - used to deserialize record from binary form</dd>
 <dt><span class="strong">Returns:</span></dt><dd>record matching given recid, or null if record is not found under given recid.</dd></dl>
 </li>
 </ul>
@@ -393,7 +392,7 @@
               A&nbsp;value,
               <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
 <div class="block"><p>Update existing record with new value. <p/> Recid must be a number returned by &lsquo;put&rsquo; method. Behaviour for invalid recid (random number or already deleted record) is not defined, typically it throws &lsquo;EndOfFileException&rsquo;, but it may also corrupt store.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>value</code> - new record value to be stored</dd><dd><code>serializer</code> - used to serialize record into binary form</dd><dd><code>A</code> - record type</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>value</code> - new record value to be stored</dd><dd><code>serializer</code> - used to serialize record into binary form</dd></dl>
 </li>
 </ul>
 <a name="compareAndSwap(long,java.lang.Object,java.lang.Object,org.mapdb.Serializer)">
@@ -409,7 +408,7 @@
                          A&nbsp;newValue,
                          <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;A&gt;&nbsp;serializer)</pre>
 <div class="block"><p>Updates existing record in atomic <a href="http://en.wikipedia.org/wiki/Compare-and-swap">(Compare And Swap)</a> manner. Value is modified only if old value matches expected value. There are three ways to match values, MapDB may use any of them: <ol>  <li>Equality check <code>oldValue==expectedOldValue</code> when old value is found in instance cache</li>  <li>Deserializing <code>oldValue</code> using <code>serializer</code> and checking <code>oldValue.equals(expectedOldValue)</code></li>  <li>Serializing <code>expectedOldValue</code> using <code>serializer </code> and comparing binary array with already serialized <code>oldValue</code> </ol> <p/> Recid must be a number returned by &lsquo;put&rsquo; method. Behaviour for invalid recid (random number or already deleted record) is not defined, typically it throws &lsquo;EndOfFileException&rsquo;, but it may also corrupt store.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>expectedOldValue</code> - old value to be compared with existing record</dd><dd><code>newValue</code> - to be written if values are matching</dd><dd><code>serializer</code> - used to serialize record into binary form</dd><dd><code>A</code> - </dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>recid</code> - (record identifier) under which record was persisted.</dd><dd><code>expectedOldValue</code> - old value to be compared with existing record</dd><dd><code>newValue</code> - to be written if values are matching</dd><dd><code>serializer</code> - used to serialize record into binary form</dd>
 <dt><span class="strong">Returns:</span></dt><dd>true if values matched and newValue was written</dd></dl>
 </li>
 </ul>
@@ -539,25 +538,28 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>getSerializerPojo</h4>
-<pre><a href="../../org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a>&nbsp;getSerializerPojo()</pre>
+<pre><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+<a href="../../org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a>&nbsp;getSerializerPojo()</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;</div>
+<div class="block"><p>Returns default serializer associated with this engine. The default serializer will be moved from Engine into DB, so it is deprecated now and this method will be removed.</p></div>
 </li>
 </ul>
-<a name="registerCloseListener(java.lang.Runnable)">
+<a name="closeListenerRegister(java.lang.Runnable)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>registerCloseListener</h4>
-<pre>void&nbsp;registerCloseListener(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</pre>
+<h4>closeListenerRegister</h4>
+<pre>void&nbsp;closeListenerRegister(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</pre>
 </li>
 </ul>
-<a name="unregisterCloseListener(java.lang.Runnable)">
+<a name="closeListenerUnregister(java.lang.Runnable)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>unregisterCloseListener</h4>
-<pre>void&nbsp;unregisterCloseListener(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</pre>
+<h4>closeListenerUnregister</h4>
+<pre>void&nbsp;closeListenerUnregister(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;closeListener)</pre>
 </li>
 </ul>
 </li>

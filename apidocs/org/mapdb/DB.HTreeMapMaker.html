@@ -139,11 +139,11 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#expireStoreSize">expireStoreSize</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;?&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#hasher">hasher</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#keySerializer">keySerializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -151,11 +151,11 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#name">name</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;?,?&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueCreator">valueCreator</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer">valueSerializer</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -234,11 +234,11 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#hasher(org.mapdb.Hasher)">hasher</a></strong>(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#hasher(org.mapdb.Hasher)">hasher</a></strong>(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;?&gt;&nbsp;hasher)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#keySerializer(org.mapdb.Serializer)">keySerializer</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;keySerializer)</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#keySerializer(org.mapdb.Serializer)">keySerializer</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;keySerializer)</code>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
 </td>
 </tr>
@@ -252,13 +252,13 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueCreator(org.mapdb.Fun.Function1)">valueCreator</a></strong>(<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&nbsp;valueCreator)</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueCreator(org.mapdb.Fun.Function1)">valueCreator</a></strong>(<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;?,?&gt;&nbsp;valueCreator)</code>
 <div class="block">If value is not found, HTreeMap can fetch and insert default value.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeMapMaker.html#valueSerializer(org.mapdb.Serializer)">valueSerializer</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;valueSerializer)</code>
 <div class="block">valueSerializer used to convert values into/from binary form.</div>
 </td>
 </tr>
@@ -308,7 +308,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>keySerializer</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a> keySerializer</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt; keySerializer</pre>
 </li>
 </ul>
 <a name="valueSerializer">
@@ -317,7 +317,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>valueSerializer</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a> valueSerializer</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt; valueSerializer</pre>
 </li>
 </ul>
 <a name="expireMaxSize">
@@ -362,7 +362,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>hasher</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a> hasher</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;?&gt; hasher</pre>
 </li>
 </ul>
 <a name="valueCreator">
@@ -371,7 +371,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>valueCreator</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a> valueCreator</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;?,?&gt; valueCreator</pre>
 </li>
 </ul>
 </li>
@@ -415,7 +415,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>keySerializer</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;keySerializer(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;keySerializer)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;keySerializer(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;keySerializer)</pre>
 <div class="block"><p>keySerializer used to convert keys into/from binary form.</p></div>
 </li>
 </ul>
@@ -425,7 +425,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>valueSerializer</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;valueSerializer(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;valueSerializer)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;valueSerializer(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;valueSerializer)</pre>
 <div class="block"><p>valueSerializer used to convert values into/from binary form.</p></div>
 </li>
 </ul>
@@ -496,7 +496,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>valueCreator</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;valueCreator(<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&nbsp;valueCreator)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;valueCreator(<a href="../../org/mapdb/Fun.Function1.html" title="interface in org.mapdb">Fun.Function1</a>&lt;?,?&gt;&nbsp;valueCreator)</pre>
 <div class="block"><p>If value is not found, HTreeMap can fetch and insert default value. <code>valueCreator</code> is used to return new value. This way <code>HTreeMap.get()</code> never returns null</p></div>
 </li>
 </ul>
@@ -506,7 +506,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>hasher</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;hasher(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeMapMaker.html" title="class in org.mapdb">DB.HTreeMapMaker</a>&nbsp;hasher(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;?&gt;&nbsp;hasher)</pre>
 </li>
 </ul>
 <a name="make()">

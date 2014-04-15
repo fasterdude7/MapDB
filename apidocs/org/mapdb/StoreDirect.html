@@ -451,7 +451,7 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></h3>
-<code><a href="../../org/mapdb/Store.html#checksum">checksum</a>, <a href="../../org/mapdb/Store.html#CHECKSUM_FLAG_MASK">CHECKSUM_FLAG_MASK</a>, <a href="../../org/mapdb/Store.html#compress">compress</a>, <a href="../../org/mapdb/Store.html#COMPRESS_FLAG_MASK">COMPRESS_FLAG_MASK</a>, <a href="../../org/mapdb/Store.html#encrypt">encrypt</a>, <a href="../../org/mapdb/Store.html#ENCRYPT_FLAG_MASK">ENCRYPT_FLAG_MASK</a>, <a href="../../org/mapdb/Store.html#encryptionXTEA">encryptionXTEA</a>, <a href="../../org/mapdb/Store.html#locks">locks</a>, <a href="../../org/mapdb/Store.html#LOG">LOG</a>, <a href="../../org/mapdb/Store.html#LZF">LZF</a>, <a href="../../org/mapdb/Store.html#newRecidLock">newRecidLock</a>, <a href="../../org/mapdb/Store.html#password">password</a>, <a href="../../org/mapdb/Store.html#recycledDataOuts">recycledDataOuts</a>, <a href="../../org/mapdb/Store.html#serializerPojo">serializerPojo</a>, <a href="../../org/mapdb/Store.html#serializerPojoInitLock">serializerPojoInitLock</a>, <a href="../../org/mapdb/Store.html#structuralLock">structuralLock</a></code></li>
+<code><a href="../../org/mapdb/Store.html#checksum">checksum</a>, <a href="../../org/mapdb/Store.html#CHECKSUM_FLAG_MASK">CHECKSUM_FLAG_MASK</a>, <a href="../../org/mapdb/Store.html#CHUNK_SIZE">CHUNK_SIZE</a>, <a href="../../org/mapdb/Store.html#CHUNK_SIZE_MOD_MASK">CHUNK_SIZE_MOD_MASK</a>, <a href="../../org/mapdb/Store.html#compress">compress</a>, <a href="../../org/mapdb/Store.html#COMPRESS_FLAG_MASK">COMPRESS_FLAG_MASK</a>, <a href="../../org/mapdb/Store.html#encrypt">encrypt</a>, <a href="../../org/mapdb/Store.html#ENCRYPT_FLAG_MASK">ENCRYPT_FLAG_MASK</a>, <a href="../../org/mapdb/Store.html#encryptionXTEA">encryptionXTEA</a>, <a href="../../org/mapdb/Store.html#locks">locks</a>, <a href="../../org/mapdb/Store.html#LOG">LOG</a>, <a href="../../org/mapdb/Store.html#LZF">LZF</a>, <a href="../../org/mapdb/Store.html#newRecidLock">newRecidLock</a>, <a href="../../org/mapdb/Store.html#password">password</a>, <a href="../../org/mapdb/Store.html#recycledDataOuts">recycledDataOuts</a>, <a href="../../org/mapdb/Store.html#serializerPojo">serializerPojo</a>, <a href="../../org/mapdb/Store.html#serializerPojoInitLock">serializerPojoInitLock</a>, <a href="../../org/mapdb/Store.html#structuralLock">structuralLock</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_org.mapdb.Engine">
@@ -477,7 +477,7 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <td class="colOne"><code><strong><a href="../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory)">StoreDirect</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">StoreDirect</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
+<td class="colOne"><code><strong><a href="../../org/mapdb/StoreDirect.html#StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean, int)">StoreDirect</a></strong>(<a href="../../org/mapdb/Volume.Factory.html" title="interface in org.mapdb">Volume.Factory</a>&nbsp;volFac,
            boolean&nbsp;readOnly,
            boolean&nbsp;deleteFilesAfterClose,
            int&nbsp;spaceReclaimMode,
@@ -485,7 +485,9 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
            long&nbsp;sizeLimit,
            boolean&nbsp;checksum,
            boolean&nbsp;compress,
-           byte[]&nbsp;password)</code>&nbsp;</td>
+           byte[]&nbsp;password,
+           boolean&nbsp;disableLocks,
+           int&nbsp;sizeIncrement)</code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -735,7 +737,7 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;org.mapdb.<a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a></h3>
-<code><a href="../../org/mapdb/Store.html#canSnapshot()">canSnapshot</a>, <a href="../../org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, org.mapdb.DataInput2)">deserialize</a>, <a href="../../org/mapdb/Store.html#expectedMasks()">expectedMasks</a>, <a href="../../org/mapdb/Store.html#forDB(org.mapdb.DB)">forDB</a>, <a href="../../org/mapdb/Store.html#forEngine(org.mapdb.Engine)">forEngine</a>, <a href="../../org/mapdb/Store.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/Store.html#lockAllWrite()">lockAllWrite</a>, <a href="../../org/mapdb/Store.html#lockPos(long)">lockPos</a>, <a href="../../org/mapdb/Store.html#newDataOut2()">newDataOut2</a>, <a href="../../org/mapdb/Store.html#printStatistics()">printStatistics</a>, <a href="../../org/mapdb/Store.html#registerCloseListener(java.lang.Runnable)">registerCloseListener</a>, <a href="../../org/mapdb/Store.html#serialize(A, org.mapdb.Serializer)">serialize</a>, <a href="../../org/mapdb/Store.html#snapshot()">snapshot</a>, <a href="../../org/mapdb/Store.html#unlockAllWrite()">unlockAllWrite</a>, <a href="../../org/mapdb/Store.html#unregisterCloseListener(java.lang.Runnable)">unregisterCloseListener</a></code></li>
+<code><a href="../../org/mapdb/Store.html#canSnapshot()">canSnapshot</a>, <a href="../../org/mapdb/Store.html#closeListenerRegister(java.lang.Runnable)">closeListenerRegister</a>, <a href="../../org/mapdb/Store.html#closeListenerUnregister(java.lang.Runnable)">closeListenerUnregister</a>, <a href="../../org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, java.io.DataInput)">deserialize</a>, <a href="../../org/mapdb/Store.html#expectedMasks()">expectedMasks</a>, <a href="../../org/mapdb/Store.html#forDB(org.mapdb.DB)">forDB</a>, <a href="../../org/mapdb/Store.html#forEngine(org.mapdb.Engine)">forEngine</a>, <a href="../../org/mapdb/Store.html#getSerializerPojo()">getSerializerPojo</a>, <a href="../../org/mapdb/Store.html#lockAllWrite()">lockAllWrite</a>, <a href="../../org/mapdb/Store.html#lockPos(long)">lockPos</a>, <a href="../../org/mapdb/Store.html#newDataOut2()">newDataOut2</a>, <a href="../../org/mapdb/Store.html#printStatistics()">printStatistics</a>, <a href="../../org/mapdb/Store.html#serialize(A, org.mapdb.Serializer)">serialize</a>, <a href="../../org/mapdb/Store.html#snapshot()">snapshot</a>, <a href="../../org/mapdb/Store.html#unlockAllWrite()">unlockAllWrite</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -1084,7 +1086,7 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
-<a name="StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[])">
+<a name="StoreDirect(org.mapdb.Volume.Factory, boolean, boolean, int, boolean, long, boolean, boolean, byte[], boolean, int)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -1098,7 +1100,9 @@ extends <a href="../../org/mapdb/Store.html" title="class in org.mapdb">Store</a
            long&nbsp;sizeLimit,
            boolean&nbsp;checksum,
            boolean&nbsp;compress,
-           byte[]&nbsp;password)</pre>
+           byte[]&nbsp;password,
+           boolean&nbsp;disableLocks,
+           int&nbsp;sizeIncrement)</pre>
 </li>
 </ul>
 <a name="StoreDirect(org.mapdb.Volume.Factory)">

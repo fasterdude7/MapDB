@@ -122,55 +122,43 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#BTREE_DEFAULT_MAX_NODE_SIZE">BTREE_DEFAULT_MAX_NODE_SIZE</a></strong></code>&nbsp;</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#CONCURRENCY">CONCURRENCY</a></strong></code>
 <div class="block">Concurrency level.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#DEFAULT_CACHE">DEFAULT_CACHE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#DEFAULT_CACHE_SIZE">DEFAULT_CACHE_SIZE</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#DEFAULT_FREE_SPACE_RECLAIM_Q">DEFAULT_FREE_SPACE_RECLAIM_Q</a></strong></code>&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#FAIR_LOCKS">FAIR_LOCKS</a></strong></code>
 <div class="block">controls if locks used in MapDB are fair</div>
 </td>
 </tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#LOG_HINTS">LOG_HINTS</a></strong></code>
-<div class="block">If true MapDB will display warnings if user is using MapDB API wrong way.</div>
-</td>
-</tr>
 <tr class="altColor">
-<td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#LOG_LOCKS">LOG_LOCKS</a></strong></code>
-<div class="block">Log lock/unlock events.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#LOG_STORE">LOG_STORE</a></strong></code>
 <div class="block">Compile-in detailed log messages from store.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#PARANOID">PARANOID</a></strong></code>
 <div class="block">Compile with more assertions and verifications.</div>
 </td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/CC.html#VOLUME_CHUNK_SHIFT">VOLUME_CHUNK_SHIFT</a></strong></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -207,28 +195,6 @@
 <pre>static final&nbsp;boolean LOG_STORE</pre>
 <div class="block"><p>Compile-in detailed log messages from store.</p></div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.CC.LOG_STORE">Constant Field Values</a></dd></dl>
-</li>
-</ul>
-<a name="LOG_LOCKS">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>LOG_LOCKS</h4>
-<pre>static final&nbsp;boolean LOG_LOCKS</pre>
-<div class="block"><p>Log lock/unlock events. Useful to diagnose deadlocks</p></div>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.CC.LOG_LOCKS">Constant Field Values</a></dd></dl>
-</li>
-</ul>
-<a name="LOG_HINTS">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>LOG_HINTS</h4>
-<pre>static final&nbsp;boolean LOG_HINTS</pre>
-<div class="block"><p>If true MapDB will display warnings if user is using MapDB API wrong way.</p></div>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.CC.LOG_HINTS">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="ASYNC_WRITE_FLUSH_DELAY">
@@ -268,18 +234,8 @@
 <li class="blockList">
 <h4>CONCURRENCY</h4>
 <pre>static final&nbsp;int CONCURRENCY</pre>
-<div class="block"><p>Concurrency level. Should be greater than number of threads accessing MapDB concurrently. On other side larger number consumes more memory</p><p>This number must be power of two: <code>CONCURRENCY = 2^N</code></p></div>
+<div class="block"><p>Concurrency level. Should be greater than number of threads accessing MapDB concurrently. On other side larger number consumes more memory <p/> This number must be power of two: <code>CONCURRENCY = 2^N</code></p></div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.CC.CONCURRENCY">Constant Field Values</a></dd></dl>
-</li>
-</ul>
-<a name="BTREE_DEFAULT_MAX_NODE_SIZE">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>BTREE_DEFAULT_MAX_NODE_SIZE</h4>
-<pre>static final&nbsp;int BTREE_DEFAULT_MAX_NODE_SIZE</pre>
-<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.CC.BTREE_DEFAULT_MAX_NODE_SIZE">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 <a name="DEFAULT_CACHE_SIZE">
@@ -315,12 +271,22 @@
 <a name="FAIR_LOCKS">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>FAIR_LOCKS</h4>
 <pre>static final&nbsp;boolean FAIR_LOCKS</pre>
 <div class="block"><p>controls if locks used in MapDB are fair</p></div>
 <dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.CC.FAIR_LOCKS">Constant Field Values</a></dd></dl>
+</li>
+</ul>
+<a name="VOLUME_CHUNK_SHIFT">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>VOLUME_CHUNK_SHIFT</h4>
+<pre>static final&nbsp;int VOLUME_CHUNK_SHIFT</pre>
+<dl><dt><span class="strong">See Also:</span></dt><dd><a href="../../constant-values.html#org.mapdb.CC.VOLUME_CHUNK_SHIFT">Constant Field Values</a></dd></dl>
 </li>
 </ul>
 </li>

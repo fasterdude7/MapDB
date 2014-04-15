@@ -139,7 +139,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#expireStoreSize">expireStoreSize</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;?&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#hasher">hasher</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -147,7 +147,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#name">name</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a></code></td>
+<td class="colFirst"><code>protected <a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#serializer">serializer</a></strong></code>&nbsp;</td>
 </tr>
 </table>
@@ -228,7 +228,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#hasher(org.mapdb.Hasher)">hasher</a></strong>(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#hasher(org.mapdb.Hasher)">hasher</a></strong>(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;?&gt;&nbsp;hasher)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>&lt;K&gt;&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util">Set</a>&lt;K&gt;</code></td>
@@ -240,7 +240,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a></code></td>
-<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#serializer(org.mapdb.Serializer)">serializer</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</code>
+<td class="colLast"><code><strong><a href="../../org/mapdb/DB.HTreeSetMaker.html#serializer(org.mapdb.Serializer)">serializer</a></strong>(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;serializer)</code>
 <div class="block">keySerializer used to convert keys into/from binary form.</div>
 </td>
 </tr>
@@ -290,7 +290,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>serializer</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a> serializer</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt; serializer</pre>
 </li>
 </ul>
 <a name="expireMaxSize">
@@ -335,7 +335,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockListLast">
 <li class="blockList">
 <h4>hasher</h4>
-<pre>protected&nbsp;<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a> hasher</pre>
+<pre>protected&nbsp;<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;?&gt; hasher</pre>
 </li>
 </ul>
 </li>
@@ -379,7 +379,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>serializer</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a>&nbsp;serializer(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&nbsp;serializer)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a>&nbsp;serializer(<a href="../../org/mapdb/Serializer.html" title="interface in org.mapdb">Serializer</a>&lt;?&gt;&nbsp;serializer)</pre>
 <div class="block"><p>keySerializer used to convert keys into/from binary form.</p></div>
 </li>
 </ul>
@@ -451,7 +451,7 @@ extends <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Object.html?
 <ul class="blockList">
 <li class="blockList">
 <h4>hasher</h4>
-<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a>&nbsp;hasher(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&nbsp;hasher)</pre>
+<pre>public&nbsp;<a href="../../org/mapdb/DB.HTreeSetMaker.html" title="class in org.mapdb">DB.HTreeSetMaker</a>&nbsp;hasher(<a href="../../org/mapdb/Hasher.html" title="interface in org.mapdb">Hasher</a>&lt;?&gt;&nbsp;hasher)</pre>
 </li>
 </ul>
 <a name="make()">
