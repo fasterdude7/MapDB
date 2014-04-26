@@ -1493,6 +1493,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.html#deserialize(java.io.DataInput, org.mapdb.SerializerBase.FastArrayList)">deserialize(DataInput, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerBase.html" title="class in org.mapdb">SerializerBase</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#deserialize(java.io.DataInput, int)">deserialize(DataInput, int)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Store.html#deserialize(org.mapdb.Serializer, int, java.io.DataInput)">deserialize(Serializer&lt;A&gt;, int, DataInput)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.html#deserializeClass(java.io.DataInput)">deserializeClass(DataInput)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerBase.html" title="class in org.mapdb">SerializerBase</a></dt>
@@ -4275,6 +4277,10 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>
 <div class="block">list of segments, this is immutable</div>
 </dd>
+<dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#serializationTransformsDeserialize">serializationTransformsDeserialize</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#serializationTransformsSerialize">serializationTransformsSerialize</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.BasicKeySerializer.html#serialize(java.io.DataOutput, int, int, java.lang.Object[])">serialize(DataOutput, int, int, Object[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.BasicKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer.BasicKeySerializer</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/BTreeKeySerializer.html#serialize(java.io.DataOutput, int, int, java.lang.Object[])">serialize(DataOutput, int, int, Object[])</a></span> - Method in class org.mapdb.<a href="./org/mapdb/BTreeKeySerializer.html" title="class in org.mapdb">BTreeKeySerializer</a></dt>
@@ -4304,6 +4310,8 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.html#serialize(java.io.DataOutput, java.lang.Object)">serialize(DataOutput, Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerBase.html" title="class in org.mapdb">SerializerBase</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.html#serialize(java.io.DataOutput, java.lang.Object, org.mapdb.SerializerBase.FastArrayList)">serialize(DataOutput, Object, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerBase.html" title="class in org.mapdb">SerializerBase</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#serialize(java.io.DataOutput, java.lang.Object)">serialize(DataOutput, Object)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Store.html#serialize(A, org.mapdb.Serializer)">serialize(A, Serializer&lt;A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
@@ -4445,6 +4453,14 @@ This class implements the LZF lossless data compression algorithm.</div>
 <dd>&nbsp;</dd>
 <dt><span class="strong"><a href="./org/mapdb/Store.html#serializerPojoInitLock">serializerPojoInitLock</a></span> - Variable in class org.mapdb.<a href="./org/mapdb/Store.html" title="class in org.mapdb">Store</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#serializerTransformAdd(org.mapdb.Fun.Function1, org.mapdb.Fun.Function1)">serializerTransformAdd(Fun.Function1&lt;A, R&gt;, Fun.Function1&lt;R, A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
+<dd>
+<div class="block">Add interceptor which may modify all deserialized/serialized objects</div>
+</dd>
+<dt><span class="strong"><a href="./org/mapdb/SerializerPojo.html#serializerTransformRemove(org.mapdb.Fun.Function1, org.mapdb.Fun.Function1)">serializerTransformRemove(Fun.Function1&lt;A, R&gt;, Fun.Function1&lt;R, A&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerPojo.html" title="class in org.mapdb">SerializerPojo</a></dt>
+<dd>
+<div class="block">Removes interceptor which may modify all deserialized/serialized objects</div>
+</dd>
 <dt><span class="strong"><a href="./org/mapdb/SerializerBase.html#serializeUnknownObject(java.io.DataOutput, java.lang.Object, org.mapdb.SerializerBase.FastArrayList)">serializeUnknownObject(DataOutput, Object, SerializerBase.FastArrayList&lt;Object&gt;)</a></span> - Method in class org.mapdb.<a href="./org/mapdb/SerializerBase.html" title="class in org.mapdb">SerializerBase</a></dt>
 <dd>
 <div class="block">override this method to extend SerializerBase functionality</div>
