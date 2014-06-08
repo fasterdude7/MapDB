@@ -579,7 +579,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.
 <pre>public static&nbsp;void&nbsp;packLong(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;out,
             long&nbsp;value)
                      throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><p>Pack non-negative long into output stream. It will occupy 1-10 bytes depending on value (lower values occupy smaller space)</p></div>
+<div class="block"><p>Pack non-negative long into output stream. It will occupy 1-10 bytes depending on value (lower values occupy smaller space)</p><p>This method originally comes from Kryo Framework, author Nathan Sweet. It was modified to fit MapDB needs.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>out</code> - DataOutput to put value into</dd><dd><code>value</code> - to be serialized, must be non-negative</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>
@@ -594,7 +594,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.
 <pre>public static&nbsp;void&nbsp;packInt(<a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataOutput.html?is-external=true" title="class or interface in java.io">DataOutput</a>&nbsp;in,
            int&nbsp;value)
                     throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><p>Pack non-negative long into output stream. It will occupy 1-5 bytes depending on value (lower values occupy smaller space)</p></div>
+<div class="block"><p>Pack non-negative long into output stream. It will occupy 1-5 bytes depending on value (lower values occupy smaller space)</p><p>This method originally comes from Kryo Framework, author Nathan Sweet. It was modified to fit MapDB needs.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>in</code> - DataOutput to put value into</dd><dd><code>value</code> - to be serialized, must be non-negative</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd></dl>

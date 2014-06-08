@@ -509,7 +509,7 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <li class="blockList">
 <h4>booleanToByteArray</h4>
 <pre>protected static&nbsp;byte[]&nbsp;booleanToByteArray(boolean[]&nbsp;bool)</pre>
-<div class="block"><p>Builds a byte array from the array of booleans, compressing up to 8 booleans per byte.</p></div>
+<div class="block"><p>Builds a byte array from the array of booleans, compressing up to 8 booleans per byte.</p><p>Author of this method is Chris Alexander.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>bool</code> - The booleans to be compressed.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>The fully compressed byte array.</dd></dl>
 </li>
@@ -523,7 +523,7 @@ implements <a href="../../org/mapdb/Serializer.html" title="interface in org.map
 <pre>protected static&nbsp;boolean[]&nbsp;readBooleanArray(int&nbsp;numBools,
                          <a href="http://docs.oracle.com/javase/6/docs/api/java/io/DataInput.html?is-external=true" title="class or interface in java.io">DataInput</a>&nbsp;is)
                                      throws <a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block"><p>Unpacks an integer from the DataInput indicating the number of booleans that are compressed. It then calculates the number of bytes, reads them in, and decompresses and converts them into an array of booleans using the toBooleanArray(byte[]); method. The array of booleans are trimmed to <code>numBools</code> elements. This is necessary in situations where the number of booleans is not a multiple of 8.</p></div>
+<div class="block"><p>Unpacks an integer from the DataInput indicating the number of booleans that are compressed. It then calculates the number of bytes, reads them in, and decompresses and converts them into an array of booleans using the toBooleanArray(byte[]); method. The array of booleans are trimmed to <code>numBools</code> elements. This is necessary in situations where the number of booleans is not a multiple of 8.</p><p>Author of this method is Chris Alexander.</p></div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>The boolean array decompressed from the bytes read in.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - If an error occurred while reading.</dd></dl>

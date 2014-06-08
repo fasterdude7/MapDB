@@ -290,7 +290,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
 <tr class="rowColor">
 <td class="colFirst"><code>protected &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><strong><a href="../../org/mapdb/SerializerPojo.html#createInstanceSkippinkConstructor(java.lang.Class)">createInstanceSkippinkConstructor</a></strong>(<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;clazz)</code>
-<div class="block">For pojo serialization we need to instanciate class without invoking its constructor.</div>
+<div class="block">For pojo serialization we need to instantiate class without invoking its constructor.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -730,7 +730,7 @@ implements <a href="http://docs.oracle.com/javase/6/docs/api/java/io/Serializabl
                                               <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a>,
                                               <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/IllegalAccessException.html?is-external=true" title="class or interface in java.lang">IllegalAccessException</a>,
                                               <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/InstantiationException.html?is-external=true" title="class or interface in java.lang">InstantiationException</a></pre>
-<div class="block"><p>For pojo serialization we need to instanciate class without invoking its constructor. There are two ways to do it: <p/>  Using proprietary API on Oracle JDK and OpenJDK  sun.reflect.ReflectionFactory.getReflectionFactory().newConstructorForSerialization()  more at <a href="http://www.javaspecialists.eu/archive/Issue175.html">http://www.javaspecialists.eu/archive/Issue175.html</a> <p/>  Using &lsquo;ObjectInputStream.newInstance&rsquo; on Android  <a href="http://stackoverflow.com/a/3448384">http://stackoverflow.com/a/3448384</a> <p/>  If non of these works we fallback into usual reflection which requires an no-arg constructor</p></div>
+<div class="block"><p>For pojo serialization we need to instantiate class without invoking its constructor. There are two ways to do it: <p/>  Using proprietary API on Oracle JDK and OpenJDK  sun.reflect.ReflectionFactory.getReflectionFactory().newConstructorForSerialization()  more at <a href="http://www.javaspecialists.eu/archive/Issue175.html">http://www.javaspecialists.eu/archive/Issue175.html</a> <p/>  Using &lsquo;ObjectInputStream.newInstance&rsquo; on Android  <a href="http://stackoverflow.com/a/3448384">http://stackoverflow.com/a/3448384</a> <p/>  If non of these works we fallback into usual reflection which requires an no-arg constructor</p></div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/NoSuchMethodException.html?is-external=true" title="class or interface in java.lang">NoSuchMethodException</a></code></dd>
 <dd><code><a href="http://docs.oracle.com/javase/6/docs/api/java/lang/reflect/InvocationTargetException.html?is-external=true" title="class or interface in java.lang.reflect">InvocationTargetException</a></code></dd>
